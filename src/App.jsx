@@ -2,11 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import PageStub from './components/PageStub';
 import Home from './pages/Home';
+import About from './pages/About';
 import { routes } from './routes';
 import { stubPageContent } from './pages/stubPages';
 
 const stubRoutes = [
-  { path: routes.about, content: stubPageContent.About },
   { path: routes.medicalSpaces, content: stubPageContent.MedicalSpaces },
   { path: routes.officeSpace, content: stubPageContent.OfficeSpace },
   { path: routes.eventSpace, content: stubPageContent.EventSpace },
@@ -23,6 +23,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path={routes.home} element={<Home />} />
+        <Route path={routes.about} element={<About />} />
         {stubRoutes.map(({ path, content }) => (
           <Route key={path} path={path} element={<PageStub {...content} />} />
         ))}

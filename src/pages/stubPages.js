@@ -1,12 +1,6 @@
 // Copy for stub pages -- placeholder eyebrow/title/description until each
 // page's Figma frame is pulled and built out (Home is already fully built).
 export const stubPageContent = {
-  About: {
-    eyebrow: 'About GCC',
-    title: 'About Gaston Christian Center',
-    description:
-      'GCC is a nonprofit serving other nonprofit organizations and churches through accessible, affordable tenant spaces in Dallas, TX.',
-  },
   MedicalSpaces: {
     eyebrow: 'Find Your Space',
     title: 'Medical Spaces',
