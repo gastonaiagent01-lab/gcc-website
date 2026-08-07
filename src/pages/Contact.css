@@ -77,6 +77,10 @@
   color: var(--color-text-muted);
 }
 
+.contact-form-note-error {
+  color: var(--color-error, #b3261e);
+}
+
 .contact-info {
   background: var(--color-cream-50);
   border-radius: var(--radius-md);

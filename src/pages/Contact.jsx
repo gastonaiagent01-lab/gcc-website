@@ -1,15 +1,32 @@
 import { useState } from 'react';
 import './Contact.css';
 
-// Form is UI-only for now — no backend/email service is wired up yet.
-// Picking a submission handler (e.g. a form service, serverless function)
-// is a cost/vendor decision that needs CEO sign-off before it's added.
+// Submits to the /api/contact Vercel serverless function, which sends the
+// message via Resend. See api/contact.js for the email-sending logic.
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus('sending');
+
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+
+      setStatus('sent');
+      form.reset();
+    } catch {
+      setStatus('error');
+    }
   }
 
   return (
@@ -55,14 +72,19 @@ export default function Contact() {
               <textarea name="message" rows={5} required />
             </label>
 
-            <button type="submit" className="btn btn-primary">
-              Send Message →
+            <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending…' : 'Send Message →'}
             </button>
 
-            {submitted && (
+            {status === 'sent' && (
               <p className="contact-form-note">
-                Thanks for reaching out — message submission isn&rsquo;t connected to email yet;
-                this is a UI preview only.
+                Thanks for reaching out — we&rsquo;ve received your message and will be in touch soon.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="contact-form-note contact-form-note-error">
+                Something went wrong sending your message. Please try again, or reach us directly
+                at contactus@gastonchristianctr.org.
               </p>
             )}
           </form>

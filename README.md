@@ -11,7 +11,7 @@ Tracked in Paperclip issue **GAS-12**.
 - **Styling:** Plain CSS with design tokens (`src/styles/tokens.css`), no CSS framework
 - **Hosting:** Vercel
 - **Analytics:** GA4, gated behind `VITE_GA_MEASUREMENT_ID` env var — inactive until GCC provides a real measurement ID
-- **Forms/integrations:** GiveButter only for now (existing embed/link carried forward — real embed URL still needed from GCC)
+- **Forms/integrations:** GiveButter (donations) + Contact form submission via Resend (`api/contact.js`, tracked in GAS-15; CEO-approved 2026-08-07: free tier, shared sending domain for v1)
 - **DNS:** Currently managed via Squarespace; GCC will need to export/grant access at launch — not needed for development
 - **Staging:** Vercel PR preview URLs + before/after screenshots on every PR
 
@@ -30,8 +30,12 @@ All 11 pages are built from their Figma frames and routed: `Home`, `About`, `Med
   facts GCC/CEO hasn't confirmed yet (e.g. Services page structure — Q31 — and New Roots
   program list — Q29 — are still open CEO-level decisions per the design file's audit trail).
   Those tags are intentionally left visible in the rendered copy, not filled in.
-- Contact page has a real form UI, but submission isn't wired to email/a backend yet — picking
-  a form service is a vendor/cost decision that needs CEO sign-off first.
+- Contact page form submits to a Vercel serverless function (`api/contact.js`) that sends the
+  message via Resend to `contactus@gastonchristianctr.org` (overridable via `CONTACT_TO_EMAIL`),
+  with the submitter's address set as reply-to. Sends from Resend's shared onboarding domain
+  (`onboarding@resend.dev`) for v1 — swap in a verified GCC sending domain later. Requires a
+  `RESEND_API_KEY` env var in Vercel; see `.env.example`. **This key still needs to be created**
+  — see "Known gaps" below.
 - Design tokens (colors, type) pulled directly from the Figma file's Homepage frame.
 
 ## Known gaps / needs from GCC or CEO
@@ -39,7 +43,12 @@ All 11 pages are built from their Figma frames and routed: `Home`, `About`, `Med
 - **GCC logo** — Figma marks it `[VECTOR LOGO — PENDING ADO-239]`; nav/footer currently show a text placeholder
 - **Photography** — all photo slots are placeholder boxes; GCC is providing real images separately
 - **GiveButter embed** — account ID (`OvV8eRSSJod8OvPn`) is confirmed in the design, but the real embed snippet/script still needs to come from GiveButter/GCC before the Give and Friends of Gaston donate buttons are live
-- **Contact form backend** — UI-only right now; needs a submission method (email service, serverless function, etc.) — flagging as a vendor/cost decision, not building until CEO approves
+- **Resend API key** — code is built (`api/contact.js`) but has no live key yet. Resend account
+  signup requires human email verification, which an agent can't complete. **Ask: a human
+  (CEO/Keven) creates a free Resend account at resend.com, generates an API key, and adds it as
+  `RESEND_API_KEY` in the Vercel project's environment variables** (and `CONTACT_TO_EMAIL` if the
+  default `contactus@gastonchristianctr.org` inbox shouldn't receive it). Nothing else is needed
+  to go live once that key exists.
 - **Social handles** — Instagram/Facebook/LinkedIn links not yet provided
 - **GA4 measurement ID** — not yet provisioned; site sends zero analytics until it is
 - **Services (Q31) and New Roots (Q29) copy** — structural/content decisions still open with GCC; placeholders are intentional, not bugs
