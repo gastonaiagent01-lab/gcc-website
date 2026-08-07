@@ -1,0 +1,156 @@
+.give-hero {
+  background: var(--color-navy-700);
+  padding: 88px 0 96px;
+}
+
+.give-hero-eyebrow {
+  color: var(--color-amber-100);
+  margin-bottom: 16px;
+}
+
+.give-hero-title {
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  max-width: 900px;
+}
+
+.give-hero-subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-navy-200);
+  max-width: 640px;
+}
+
+.give-body {
+  background: var(--color-white);
+  padding: 96px 0;
+}
+
+.give-columns {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.give-form-eyebrow,
+.give-impact-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 16px;
+}
+
+.give-form-title {
+  font-size: 36px;
+  color: var(--color-navy-700);
+  margin-bottom: 24px;
+}
+
+.give-amount-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.give-amount-btn {
+  flex: 1 0 calc(25% - 12px);
+  padding: 14px 20px;
+  border: 1.5px solid var(--color-cream-100);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-navy-700);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.give-amount-btn:hover {
+  border-color: var(--color-amber-700);
+}
+
+.give-embed-note {
+  background: var(--color-cream-50);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.give-impact {
+  background: var(--color-cream-50);
+  border-radius: var(--radius-md);
+  padding: 48px 40px;
+}
+
+.give-impact-title {
+  font-size: 28px;
+  color: var(--color-navy-700);
+  margin-bottom: 24px;
+}
+
+.give-impact-item {
+  margin-bottom: 20px;
+}
+
+.give-impact-amount {
+  font-weight: 600;
+  color: var(--color-navy-700);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.give-impact-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.give-other-ways {
+  background: var(--color-white);
+  padding: 96px 0;
+  border-top: 1px solid var(--color-cream-100);
+}
+
+.give-other-ways-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 16px;
+}
+
+.give-other-ways-title {
+  font-size: 36px;
+  color: var(--color-navy-700);
+  margin-bottom: 48px;
+}
+
+.give-other-ways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.give-other-ways-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-bottom: 16px;
+}
+
+.give-other-ways-card-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .give-columns,
+  .give-other-ways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .give-amount-btn {
+    flex: 1 0 calc(33% - 12px);
+  }
+}

@@ -1,0 +1,280 @@
+.fog-hero {
+  background: var(--color-navy-700);
+  padding: 88px 0 96px;
+}
+
+.fog-hero-eyebrow {
+  color: var(--color-amber-100);
+  margin-bottom: 16px;
+}
+
+.fog-hero-title {
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  max-width: 900px;
+}
+
+.fog-hero-subtitle {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-navy-200);
+  max-width: 640px;
+}
+
+.fog-hero-photo {
+  border-radius: 0;
+  min-height: 420px;
+  margin: 0;
+}
+
+.fog-why {
+  background: var(--color-cream-50);
+  padding: 96px 0;
+}
+
+.fog-why-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 16px;
+}
+
+.fog-why-title {
+  font-size: 40px;
+  color: var(--color-navy-700);
+  margin-bottom: 24px;
+  max-width: 800px;
+}
+
+.fog-why-body {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-navy-700);
+  max-width: 800px;
+  margin-bottom: 24px;
+}
+
+.fog-give-btn {
+  margin-bottom: 12px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fog-processor-note {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.fog-benefits {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+
+.fog-benefits-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-bottom: 12px;
+}
+
+.fog-benefits ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fog-benefits li {
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
+.fog-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.fog-value-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+}
+
+.fog-value-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-bottom: 12px;
+}
+
+.fog-value-card-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.fog-tenants {
+  background: var(--color-white);
+  padding: 96px 0;
+}
+
+.fog-tenants-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 16px;
+}
+
+.fog-tenants-title {
+  font-size: 40px;
+  color: var(--color-navy-700);
+  margin-bottom: 24px;
+}
+
+.fog-tenants-intro {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.fog-tenant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.fog-tenant-card {
+  background: var(--color-cream-50);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+}
+
+.fog-tenant-logo {
+  height: 80px;
+  border-radius: var(--radius-sm);
+  background: var(--color-cream-100);
+  margin-bottom: 10px;
+}
+
+.fog-tenant-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-bottom: 4px;
+}
+
+.fog-tenant-type {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.fog-tenants-note {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.fog-become {
+  background: var(--color-cream-50);
+  padding: 96px 0;
+}
+
+.fog-become-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 16px;
+}
+
+.fog-become-title {
+  font-size: 40px;
+  color: var(--color-navy-700);
+  margin-bottom: 48px;
+}
+
+.fog-way-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.fog-way-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+}
+
+.fog-way-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-navy-700);
+  margin-bottom: 12px;
+}
+
+.fog-way-card-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.fog-social {
+  background: var(--color-navy-700);
+  padding: 96px 0;
+}
+
+.fog-social-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.fog-social-title {
+  font-size: 40px;
+  color: var(--color-white);
+}
+
+.fog-social-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-navy-200);
+  max-width: 640px;
+}
+
+.fog-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.fog-social-link {
+  border: 1.5px solid var(--color-white);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 24px;
+}
+
+@media (max-width: 900px) {
+  .fog-value-grid,
+  .fog-way-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fog-tenant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .fog-value-grid,
+  .fog-way-grid,
+  .fog-tenant-grid {
+    grid-template-columns: 1fr;
+  }
+}

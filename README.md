@@ -17,18 +17,32 @@ Tracked in Paperclip issue **GAS-12**.
 
 ## What's built (v1)
 
-- Full app shell: `Nav` (with Find Your Space / Give dropdowns), `Footer`, routing for all 11 pages
-- **Home page fully built** from the Figma Homepage frame (hero, mission strip, 4 space cards, mission statement, New Roots spotlight, give CTA)
-- Remaining 10 pages (`About`, `Medical Spaces`, `Office Space`, `Event Space`, `Church Space`, `Give`, `Services`, `New Roots`, `Contact`, `Friends of Gaston`) are placeholder stubs (`PageStub` component) with routing wired up — content/layout for each comes from that page's Figma frame in a follow-up increment
-- Design tokens (colors, type) pulled directly from the Figma file's Homepage frame
+All 11 pages are built from their Figma frames and routed: `Home`, `About`, `Medical Spaces`,
+`Office Space`, `Event Space`, `Church Space`, `Give`, `Services`, `New Roots`, `Contact`,
+`Friends of Gaston`. Full app shell (`Nav` with Find Your Space / Give dropdowns, `Footer`).
+
+- The four "Find Your Space" detail pages (Medical/Office/Event/Church) share a
+  `SpaceDetailPage` template component (`src/components/SpaceDetailPage.jsx`) driven by
+  per-page content in `src/pages/spaceContent.js`, since their Figma layouts are identical
+  (hero → gallery → feature grid → amenities → CTA).
+- Content for every page was pulled directly from Figma file 03 (`Tc94Yxi9ntKuoOPJ7ClAPF`),
+  including the `[COPY NEEDED]` / `[CONFIRM]` placeholder tags the design already carries for
+  facts GCC/CEO hasn't confirmed yet (e.g. Services page structure — Q31 — and New Roots
+  program list — Q29 — are still open CEO-level decisions per the design file's audit trail).
+  Those tags are intentionally left visible in the rendered copy, not filled in.
+- Contact page has a real form UI, but submission isn't wired to email/a backend yet — picking
+  a form service is a vendor/cost decision that needs CEO sign-off first.
+- Design tokens (colors, type) pulled directly from the Figma file's Homepage frame.
 
 ## Known gaps / needs from GCC or CEO
 
 - **GCC logo** — Figma marks it `[VECTOR LOGO — PENDING ADO-239]`; nav/footer currently show a text placeholder
 - **Photography** — all photo slots are placeholder boxes; GCC is providing real images separately
-- **GiveButter embed** — using a plain link placeholder; need the real embed code/URL
+- **GiveButter embed** — account ID (`OvV8eRSSJod8OvPn`) is confirmed in the design, but the real embed snippet/script still needs to come from GiveButter/GCC before the Give and Friends of Gaston donate buttons are live
+- **Contact form backend** — UI-only right now; needs a submission method (email service, serverless function, etc.) — flagging as a vendor/cost decision, not building until CEO approves
 - **Social handles** — Instagram/Facebook/LinkedIn links not yet provided
 - **GA4 measurement ID** — not yet provisioned; site sends zero analytics until it is
+- **Services (Q31) and New Roots (Q29) copy** — structural/content decisions still open with GCC; placeholders are intentional, not bugs
 
 ## Local development
 
