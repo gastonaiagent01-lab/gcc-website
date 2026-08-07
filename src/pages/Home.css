@@ -1,0 +1,215 @@
+.hero {
+  background: var(--color-navy-700);
+  padding: 60px 0;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  color: var(--color-navy-200);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-navy-200);
+  margin-bottom: 40px;
+  max-width: 560px;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  background: rgba(19, 112, 175, 0.2);
+  color: var(--color-navy-200);
+  min-height: 400px;
+}
+
+.mission-strip {
+  background: var(--color-cream-100);
+  padding: 28px var(--section-x);
+  text-align: center;
+}
+
+.mission-strip p {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--color-navy-700);
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.find-space {
+  padding: 80px 0;
+}
+
+.find-space-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 12px;
+}
+
+.find-space-title {
+  font-size: 40px;
+  color: var(--color-navy-700);
+  margin-bottom: 48px;
+  max-width: 700px;
+}
+
+.space-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.space-card {
+  background: var(--color-cream-50);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.space-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-cream-100);
+}
+
+.space-card-title {
+  font-size: 18px;
+  color: var(--color-navy-700);
+}
+
+.space-card-description {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  flex-grow: 1;
+}
+
+.space-card-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-navy-400);
+}
+
+.mission-statement {
+  background: var(--color-navy-700);
+  padding: 64px 0;
+}
+
+.mission-eyebrow {
+  color: var(--color-navy-200);
+  margin-bottom: 32px;
+}
+
+.mission-text {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--color-white);
+  max-width: 1120px;
+}
+
+.new-roots {
+  background: var(--color-cream-50);
+  padding: 80px 0;
+}
+
+.new-roots-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.new-roots-photo {
+  color: var(--color-amber-700);
+  min-height: 360px;
+}
+
+.new-roots-eyebrow {
+  color: var(--color-amber-700);
+  margin-bottom: 16px;
+}
+
+.new-roots-title {
+  font-size: 36px;
+  color: var(--color-navy-700);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.new-roots-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.new-roots-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.give-cta {
+  background: var(--color-amber-700);
+  padding: 64px 0;
+}
+
+.give-cta-eyebrow {
+  color: var(--color-amber-100);
+  margin-bottom: 16px;
+}
+
+.give-cta-title {
+  font-size: 40px;
+  color: var(--color-white);
+  margin-bottom: 32px;
+  max-width: 700px;
+}
+
+.give-cta-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .hero-inner,
+  .new-roots-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .space-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .space-cards {
+    grid-template-columns: 1fr;
+  }
+}
