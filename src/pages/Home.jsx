@@ -9,6 +9,8 @@ const spaceCards = [
       'Our medical spaces elevate care by giving providers a professional and patient-centered environment. Accessible spaces for private practices, specialists, and community health programs.',
     cta: 'Inquire About Medical Space →',
     to: routes.medicalSpaces,
+    image: '/images/live/medical-spaces.webp',
+    imageAlt: 'Suite Medical 25 interior at Gaston Christian Center',
   },
   {
     title: 'Office Space',
@@ -16,6 +18,8 @@ const spaceCards = [
       'Our office spaces give teams the environment they need to communicate clearly and innovate with purpose. Flexible layouts with utilities included — 60% below market rate.',
     cta: 'View Available Suites →',
     to: routes.officeSpace,
+    image: '/images/live/office-space.webp',
+    imageAlt: 'Office suite interior at Gaston Christian Center',
   },
   {
     title: 'Event Rental',
@@ -23,6 +27,8 @@ const spaceCards = [
       'Our event venues bring people together and spark collaboration and meaningful connection. From workshops to celebrations, empower hosts to create experiences that drive lasting impact.',
     cta: 'Explore Event Venues →',
     to: routes.eventSpace,
+    image: '/images/live/event-space.webp',
+    imageAlt: 'Fellowship Hall set up for an event at Gaston Christian Center',
   },
   {
     title: 'Church Space',
@@ -30,6 +36,8 @@ const spaceCards = [
       'Our church spaces encourage spiritual connection and meaningful fellowship — a place where transformation can begin. Welcoming environments for worship, ceremonies, and outreach.',
     cta: 'Learn About Church Space →',
     to: routes.churchSpace,
+    image: '/images/live/church-space.webp',
+    imageAlt: 'A small group gathered in worship at Gaston Christian Center',
   },
 ];
 
@@ -77,7 +85,7 @@ export default function Home() {
           <div className="space-cards">
             {spaceCards.map((card) => (
               <div key={card.title} className="space-card">
-                <div className="space-card-icon" aria-hidden="true" />
+                <img className="space-card-image" src={card.image} alt={card.imageAlt} />
                 <h3 className="space-card-title">{card.title}</h3>
                 <p className="space-card-description">{card.description}</p>
                 <Link to={card.to} className="space-card-link">

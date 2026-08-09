@@ -89,9 +89,10 @@
   gap: 16px;
 }
 
-.space-card-icon {
-  width: 40px;
-  height: 40px;
+.space-card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
   border-radius: var(--radius-md);
   background: var(--color-cream-100);
 }
