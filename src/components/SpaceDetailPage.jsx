@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
+import ImageCarousel from './ImageCarousel';
 import './SpaceDetailPage.css';
 
 // Shared layout for the four "Find Your Space" detail pages (Medical, Office,
@@ -9,8 +10,7 @@ export default function SpaceDetailPage({
   eyebrow,
   titleLines,
   subtitle,
-  photoSrc,
-  photoAlt,
+  photos,
   featuresEyebrow,
   featuresTitle,
   features,
@@ -39,7 +39,7 @@ export default function SpaceDetailPage({
         </div>
       </section>
 
-      <img className="placeholder-photo space-gallery-photo" src={photoSrc} alt={photoAlt} />
+      <ImageCarousel images={photos} className="space-gallery-photo" />
 
       <section className="space-features">
         <div className="container">

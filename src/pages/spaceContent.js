@@ -9,8 +9,17 @@ export const medicalSpaces = {
   titleLines: ['Medical & Clinical Spaces'],
   subtitle:
     'Purpose-built clinical suites for health ministries, FQHCs, and community health organizations. Suite North 100 — 25+ rooms purpose-built for clinical operations. [CONFIRM — ADA compliance and telehealth language with GCC; Q17/Q18]',
-  photoSrc: '/images/live/medical-spaces.webp',
-  photoAlt: 'Suite Medical 25 interior at Gaston Christian Center',
+  photos: [
+    { src: '/images/live/medical-spaces-1.webp', alt: 'Nurse station in Suite Medical 25', caption: 'Nurse Station' },
+    { src: '/images/live/medical-spaces-2.webp', alt: 'Workroom in Suite Medical 25', caption: 'Workroom' },
+    { src: '/images/live/medical-spaces-3.webp', alt: 'Sample exam room in Suite Medical 25', caption: 'Exam Room' },
+    { src: '/images/live/medical-spaces-4.webp', alt: 'Consulting room in Suite Medical 25', caption: 'Consulting' },
+    { src: '/images/live/medical-spaces-5.webp', alt: 'Receiving area in Suite Medical 25', caption: 'Receiving' },
+    { src: '/images/live/medical-spaces-6.webp', alt: 'Analysis room in Suite Medical 25', caption: 'Analysis' },
+    { src: '/images/live/medical-spaces-7.webp', alt: 'Restroom in Suite Medical 25', caption: 'Restroom' },
+    { src: '/images/live/medical-spaces-8.webp', alt: 'Staff breakroom in Suite Medical 25', caption: 'Staff Breakroom' },
+    { src: '/images/live/medical-spaces-9.webp', alt: 'Team room in Suite Medical 25', caption: 'Team Room' },
+  ],
   featuresEyebrow: "What's Included",
   featuresTitle: 'Space Features',
   features: [
@@ -53,8 +62,16 @@ export const officeSpace = {
   titleLines: ['Office Space for', 'Mission-Driven Orgs'],
   subtitle:
     'Private offices and open work areas for nonprofits, ministries, and community organizations at rates that protect your mission budget.',
-  photoSrc: '/images/live/office-space.webp',
-  photoAlt: 'Office suite interior at Gaston Christian Center',
+  photos: [
+    { src: '/images/live/office-space-1.webp', alt: 'Suite North 206 office interior', caption: 'Suite North 206' },
+    { src: '/images/live/office-space-2.webp', alt: 'Suite North 206 office interior', caption: 'Suite North 206' },
+    { src: '/images/live/office-space-3.webp', alt: 'Suite North 208 office interior', caption: 'Suite North 208' },
+    { src: '/images/live/office-space-4.webp', alt: 'Suite North 208 office interior', caption: 'Suite North 208' },
+    { src: '/images/live/office-space-5.webp', alt: 'Suite North 207 office interior', caption: 'Suite North 207' },
+    { src: '/images/live/office-space-6.webp', alt: 'Suite North 207 office interior', caption: 'Suite North 207' },
+    { src: '/images/live/office-space-7.webp', alt: 'Suite North 210 office interior', caption: 'Suite North 210' },
+    { src: '/images/live/office-space-8.webp', alt: 'Suite North 210 office interior', caption: 'Suite North 210' },
+  ],
   featuresEyebrow: 'Available Options',
   featuresTitle: 'Available Suites',
   features: [
@@ -97,8 +114,11 @@ export const eventSpace = {
   titleLines: ['Event & Meeting Spaces'],
   subtitle:
     'Flexible hall and classroom space for community events, workshops, ministry programs, and special gatherings.',
-  photoSrc: '/images/live/event-space.webp',
-  photoAlt: 'Fellowship Hall set up for an event at Gaston Christian Center',
+  photos: [
+    { src: '/images/live/event-space-1.webp', alt: 'Fellowship Hall set up for an event', caption: 'Fellowship Hall' },
+    { src: '/images/live/event-space-2.webp', alt: 'Conference Room 106', caption: 'Conference Room 106' },
+    { src: '/images/live/event-space-3.webp', alt: 'Sanctuary available for events', caption: 'Sanctuary' },
+  ],
   featuresEyebrow: "What's Included",
   featuresTitle: 'Space Features',
   features: [
@@ -135,8 +155,10 @@ export const churchSpace = {
   titleLines: ['Church & Worship Spaces'],
   subtitle:
     'Dedicated sanctuary and fellowship space for congregations of all sizes — a spiritual home for churches rooted in Dallas.',
-  photoSrc: '/images/live/church-space.webp',
-  photoAlt: 'A small group gathered in worship at Gaston Christian Center',
+  photos: [
+    { src: '/images/live/church-space-1.webp', alt: 'Sanctuary at Gaston Christian Center' },
+    { src: '/images/live/church-space-2.webp', alt: 'Worship space at Gaston Christian Center' },
+  ],
   featuresEyebrow: "What's Included",
   featuresTitle: 'Space Features',
   features: [
