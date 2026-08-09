@@ -62,9 +62,11 @@ export default function FriendsOfGaston() {
         </div>
       </section>
 
-      <div className="placeholder-photo fog-hero-photo">
-        [PHOTO NEEDED] GCC community event or partners
-      </div>
+      <img
+        className="placeholder-photo fog-hero-photo"
+        src="/images/live/friends-of-gaston-hero.webp"
+        alt="Gaston Christian Center community"
+      />
 
       <section className="fog-why">
         <div className="container">

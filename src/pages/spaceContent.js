@@ -9,7 +9,8 @@ export const medicalSpaces = {
   titleLines: ['Medical & Clinical Spaces'],
   subtitle:
     'Purpose-built clinical suites for health ministries, FQHCs, and community health organizations. Suite North 100 — 25+ rooms purpose-built for clinical operations. [CONFIRM — ADA compliance and telehealth language with GCC; Q17/Q18]',
-  photoLabel: '[PHOTO NEEDED] Medical Spaces interior',
+  photoSrc: '/images/live/medical-spaces.webp',
+  photoAlt: 'Suite Medical 25 interior at Gaston Christian Center',
   featuresEyebrow: "What's Included",
   featuresTitle: 'Space Features',
   features: [
@@ -52,7 +53,8 @@ export const officeSpace = {
   titleLines: ['Office Space for', 'Mission-Driven Orgs'],
   subtitle:
     'Private offices and open work areas for nonprofits, ministries, and community organizations at rates that protect your mission budget.',
-  photoLabel: '[PHOTO NEEDED] Office Space interior',
+  photoSrc: '/images/live/office-space.webp',
+  photoAlt: 'Office suite interior at Gaston Christian Center',
   featuresEyebrow: 'Available Options',
   featuresTitle: 'Available Suites',
   features: [
@@ -95,7 +97,8 @@ export const eventSpace = {
   titleLines: ['Event & Meeting Spaces'],
   subtitle:
     'Flexible hall and classroom space for community events, workshops, ministry programs, and special gatherings.',
-  photoLabel: '[PHOTO NEEDED] Event Space interior',
+  photoSrc: '/images/live/event-space.webp',
+  photoAlt: 'Fellowship Hall set up for an event at Gaston Christian Center',
   featuresEyebrow: "What's Included",
   featuresTitle: 'Space Features',
   features: [
@@ -132,7 +135,8 @@ export const churchSpace = {
   titleLines: ['Church & Worship Spaces'],
   subtitle:
     'Dedicated sanctuary and fellowship space for congregations of all sizes — a spiritual home for churches rooted in Dallas.',
-  photoLabel: '[PHOTO NEEDED] Church Space interior',
+  photoSrc: '/images/live/church-space.webp',
+  photoAlt: 'A small group gathered in worship at Gaston Christian Center',
   featuresEyebrow: "What's Included",
   featuresTitle: 'Space Features',
   features: [

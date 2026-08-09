@@ -55,9 +55,11 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="placeholder-photo hero-photo">
-            [PHOTO NEEDED] GCC facility or community image
-          </div>
+          <img
+            className="placeholder-photo hero-photo"
+            src="/images/live/hero-home.webp"
+            alt="Gaston Christian Center community"
+          />
         </div>
       </section>
 
@@ -101,9 +103,11 @@ export default function Home() {
 
       <section className="new-roots">
         <div className="container new-roots-inner">
-          <div className="placeholder-photo new-roots-photo">
-            [PHOTO NEEDED] New Roots community / program image
-          </div>
+          <img
+            className="placeholder-photo new-roots-photo"
+            src="/images/live/new-roots-graphic.webp"
+            alt="New Roots Neighborhood Program"
+          />
           <div className="new-roots-text">
             <p className="eyebrow new-roots-eyebrow">Program Spotlight</p>
             <h2 className="new-roots-title">New Roots Neighborhood Program</h2>

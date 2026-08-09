@@ -9,7 +9,8 @@ export default function SpaceDetailPage({
   eyebrow,
   titleLines,
   subtitle,
-  photoLabel,
+  photoSrc,
+  photoAlt,
   featuresEyebrow,
   featuresTitle,
   features,
@@ -38,7 +39,7 @@ export default function SpaceDetailPage({
         </div>
       </section>
 
-      <div className="placeholder-photo space-gallery-photo">{photoLabel}</div>
+      <img className="placeholder-photo space-gallery-photo" src={photoSrc} alt={photoAlt} />
 
       <section className="space-features">
         <div className="container">

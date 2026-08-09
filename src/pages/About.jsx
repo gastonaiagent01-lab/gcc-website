@@ -38,9 +38,11 @@ export default function About() {
               and church facilities — reducing overhead so organizations can focus on people.
             </p>
           </div>
-          <div className="placeholder-photo about-history-photo">
-            [PHOTO NEEDED] GCC facility exterior or interior
-          </div>
+          <img
+            className="placeholder-photo about-history-photo"
+            src="/images/live/about-facility.webp"
+            alt="Gaston Avenue Baptist Church, Dallas, early 1900s"
+          />
         </div>
         <div className="container">
           <div className="about-timeline-placeholder">

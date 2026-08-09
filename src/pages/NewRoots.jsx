@@ -24,9 +24,11 @@ export default function NewRoots() {
         </div>
       </section>
 
-      <div className="placeholder-photo newroots-hero-photo">
-        [PHOTO NEEDED] New Roots community program
-      </div>
+      <img
+        className="placeholder-photo newroots-hero-photo"
+        src="/images/live/new-roots-hero.webp"
+        alt="New Roots community program"
+      />
 
       <section className="newroots-about">
         <div className="container newroots-about-columns">
@@ -44,9 +46,11 @@ export default function NewRoots() {
               GCC — Q29]
             </p>
           </div>
-          <div className="placeholder-photo newroots-about-photo">
-            [PHOTO NEEDED] New Roots participants
-          </div>
+          <img
+            className="placeholder-photo newroots-about-photo"
+            src="/images/live/new-roots-about.webp"
+            alt="New Roots participants"
+          />
         </div>
       </section>
 

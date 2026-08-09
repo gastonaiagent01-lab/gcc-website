@@ -110,3 +110,11 @@ img {
   padding: 16px;
   min-height: 280px;
 }
+
+img.placeholder-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  object-fit: cover;
+}
