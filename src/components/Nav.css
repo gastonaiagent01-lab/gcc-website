@@ -20,15 +20,15 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 44px;
+  height: 64px;
   background: var(--color-white);
-  padding: 0 14px;
+  padding: 0 16px;
   border-radius: var(--radius-md);
 }
 
 .nav-logo-img {
   display: block;
-  height: 26px;
+  height: 44px;
   width: auto;
 }
 
