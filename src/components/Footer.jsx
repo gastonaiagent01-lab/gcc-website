@@ -6,7 +6,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
-        <div className="footer-logo">GCC</div>
+        <img
+          src="/images/brand/gcc-logo-horizontal.webp"
+          alt="Gaston Christian Center"
+          className="footer-logo"
+        />
         <div className="footer-contact">
           <p>8515 Greenville Ave., Dallas, TX 75243</p>
           <p>Suite S104</p>

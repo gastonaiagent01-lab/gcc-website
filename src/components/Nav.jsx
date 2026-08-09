@@ -32,8 +32,11 @@ export default function Nav() {
     <header className="nav">
       <div className="nav-inner">
         <Link to={routes.home} className="nav-logo">
-          {/* [LOGO — ADO-239] existing GCC logo asset pending from client */}
-          GCC
+          <img
+            src="/images/brand/gcc-logo-horizontal.webp"
+            alt="Gaston Christian Center"
+            className="nav-logo-img"
+          />
         </Link>
         <nav className="nav-links" aria-label="Primary">
           <Link to={routes.home} className="nav-link">Home</Link>

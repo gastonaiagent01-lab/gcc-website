@@ -12,10 +12,12 @@
 }
 
 .footer-logo {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 22px;
-  color: var(--color-white);
+  display: block;
+  height: 40px;
+  width: auto;
+  background: var(--color-white);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
 }
 
 .footer-contact p {

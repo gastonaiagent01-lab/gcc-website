@@ -17,11 +17,18 @@
 }
 
 .nav-logo {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--color-white);
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+  background: var(--color-white);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+}
+
+.nav-logo-img {
+  display: block;
+  height: 48px;
+  width: auto;
 }
 
 .nav-links {
