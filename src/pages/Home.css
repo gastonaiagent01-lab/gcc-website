@@ -149,6 +149,16 @@
   min-height: 360px;
 }
 
+/* new-roots-graphic.webp is a wide (2500x662) logo wordmark on a white
+   background, not a photo — object-fit: cover (the global default for
+   .placeholder-photo images) crops off the tree icon and clips the
+   wordmark. Show it uncropped instead. */
+img.placeholder-photo.new-roots-photo {
+  background: var(--color-white);
+  object-fit: contain;
+  padding: 32px;
+}
+
 .new-roots-eyebrow {
   color: var(--color-amber-700);
   margin-bottom: 16px;
