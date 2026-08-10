@@ -34,8 +34,10 @@ export default function ImageCarousel({ images, className = '' }) {
         <div className="image-carousel-track">
           {images.map((img) => (
             <div className="image-carousel-slide" key={img.src}>
-              <img className="image-carousel-photo" src={img.src} alt={img.alt} loading="lazy" />
-              {img.caption && <p className="image-carousel-caption">{img.caption}</p>}
+              <div className="image-carousel-frame">
+                <img className="image-carousel-photo" src={img.src} alt={img.alt} loading="lazy" />
+                {img.caption && <p className="image-carousel-caption">{img.caption}</p>}
+              </div>
             </div>
           ))}
         </div>
