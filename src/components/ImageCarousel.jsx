@@ -1,64 +1,37 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 import './ImageCarousel.css';
 
-// Swipeable snap carousel for the space detail pages' photo galleries (GAS-33).
-// `react-native-snap-carousel` was requested as a reference, but it's a React
-// Native library (built on RN's View/Animated/PanResponder) and can't run in
-// this Vite + react-dom web app. This reproduces its actual behavior — a
-// large centered slide, real swipe/drag paging, momentum snap, small peeks of
-// the neighbors — using native CSS scroll-snap so touch/trackpad gestures
-// work for free instead of being hand-rolled.
+// Swipeable carousel for the space detail pages' photo galleries (GAS-33),
+// built on Embla Carousel — a maintained React (web) carousel component
+// library, not a hand-rolled CSS scroll-snap or React Native component.
 export default function ImageCarousel({ images, className = '' }) {
-  const trackRef = useRef(null);
-  const [index, setIndex] = useState(0);
   const count = images?.length ?? 0;
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: count > 1, align: 'center' });
+  const [index, setIndex] = useState(0);
 
-  const scrollToIndex = (i) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const clamped = (i + count) % count;
-    const slide = track.children[clamped];
-    if (slide) {
-      track.scrollTo({ left: slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2, behavior: 'smooth' });
-    }
-  };
+  const scrollTo = useCallback((i) => emblaApi?.scrollTo(i), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   useEffect(() => {
-    const track = trackRef.current;
-    if (!track || count < 2) return;
-
-    let frame;
-    const handleScroll = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const trackCenter = track.scrollLeft + track.clientWidth / 2;
-        let closest = 0;
-        let closestDistance = Infinity;
-        Array.from(track.children).forEach((slide, i) => {
-          const slideCenter = slide.offsetLeft + slide.clientWidth / 2;
-          const distance = Math.abs(slideCenter - trackCenter);
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closest = i;
-          }
-        });
-        setIndex(closest);
-      });
-    };
-
-    track.addEventListener('scroll', handleScroll, { passive: true });
+    if (!emblaApi) return;
+    const onSelect = () => setIndex(emblaApi.selectedScrollSnap());
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
     return () => {
-      track.removeEventListener('scroll', handleScroll);
-      cancelAnimationFrame(frame);
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
     };
-  }, [count]);
+  }, [emblaApi]);
 
   if (!images || count === 0) return null;
 
   return (
     <div className={`image-carousel ${className}`}>
-      <div className="image-carousel-viewport">
-        <div className="image-carousel-track" ref={trackRef}>
+      <div className="image-carousel-viewport" ref={emblaRef}>
+        <div className="image-carousel-track">
           {images.map((img) => (
             <div className="image-carousel-slide" key={img.src}>
               <img className="image-carousel-photo" src={img.src} alt={img.alt} loading="lazy" />
@@ -66,28 +39,28 @@ export default function ImageCarousel({ images, className = '' }) {
             </div>
           ))}
         </div>
-
-        {count > 1 && (
-          <>
-            <button
-              type="button"
-              className="image-carousel-arrow image-carousel-arrow-prev"
-              onClick={() => scrollToIndex(index - 1)}
-              aria-label="Previous photo"
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              className="image-carousel-arrow image-carousel-arrow-next"
-              onClick={() => scrollToIndex(index + 1)}
-              aria-label="Next photo"
-            >
-              ›
-            </button>
-          </>
-        )}
       </div>
+
+      {count > 1 && (
+        <>
+          <button
+            type="button"
+            className="image-carousel-arrow image-carousel-arrow-prev"
+            onClick={scrollPrev}
+            aria-label="Previous photo"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            className="image-carousel-arrow image-carousel-arrow-next"
+            onClick={scrollNext}
+            aria-label="Next photo"
+          >
+            ›
+          </button>
+        </>
+      )}
 
       {count > 1 && (
         <div className="image-carousel-dots" role="tablist" aria-label="Photo gallery navigation">
@@ -99,7 +72,7 @@ export default function ImageCarousel({ images, className = '' }) {
               aria-selected={i === index}
               aria-label={`Show photo ${i + 1} of ${count}`}
               className={`image-carousel-dot ${i === index ? 'is-active' : ''}`}
-              onClick={() => scrollToIndex(i)}
+              onClick={() => scrollTo(i)}
             />
           ))}
         </div>
