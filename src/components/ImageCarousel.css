@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 32px var(--section-x) 0;
+  padding: 32px 16px 0;
 }
 
 /* Arrows are absolutely positioned against this wrapper (not the outer
