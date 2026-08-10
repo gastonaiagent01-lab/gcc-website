@@ -1,6 +1,8 @@
 .image-carousel {
   width: 100%;
-  padding-top: 32px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px var(--section-x) 0;
 }
 
 /* Arrows are absolutely positioned against this wrapper (not the outer
