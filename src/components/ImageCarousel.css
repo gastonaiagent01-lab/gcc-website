@@ -1,7 +1,6 @@
 .image-carousel {
   width: 100%;
   padding: 32px 16px 0;
-  background: var(--color-navy-700);
 }
 
 /* Arrows are absolutely positioned against this wrapper (not the outer
@@ -106,6 +105,7 @@
   justify-content: center;
   gap: 8px;
   padding: 16px 0;
+  background: var(--color-cream-100);
 }
 
 .image-carousel-dot {
@@ -114,12 +114,12 @@
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  background: var(--color-border);
   cursor: pointer;
 }
 
 .image-carousel-dot.is-active {
-  background: var(--color-white);
+  background: var(--color-navy-400);
 }
 
 @media (max-width: 480px) {
