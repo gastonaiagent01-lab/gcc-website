@@ -15,9 +15,6 @@
   display: block;
   height: 40px;
   width: auto;
-  background: var(--color-white);
-  padding: 8px 12px;
-  border-radius: var(--radius-md);
 }
 
 .footer-contact p {

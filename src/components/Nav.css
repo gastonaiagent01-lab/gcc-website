@@ -21,9 +21,6 @@
   align-items: center;
   flex-shrink: 0;
   height: 64px;
-  background: var(--color-white);
-  padding: 0 16px;
-  border-radius: var(--radius-md);
 }
 
 .nav-logo-img {
