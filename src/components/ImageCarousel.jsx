@@ -30,39 +30,41 @@ export default function ImageCarousel({ images, className = '' }) {
 
   return (
     <div className={`image-carousel ${className}`}>
-      <div className="image-carousel-viewport" ref={emblaRef}>
-        <div className="image-carousel-track">
-          {images.map((img) => (
-            <div className="image-carousel-slide" key={img.src}>
-              <div className="image-carousel-frame">
-                <img className="image-carousel-photo" src={img.src} alt={img.alt} loading="lazy" />
-                {img.caption && <p className="image-carousel-caption">{img.caption}</p>}
+      <div className="image-carousel-stage">
+        <div className="image-carousel-viewport" ref={emblaRef}>
+          <div className="image-carousel-track">
+            {images.map((img) => (
+              <div className="image-carousel-slide" key={img.src}>
+                <div className="image-carousel-frame">
+                  <img className="image-carousel-photo" src={img.src} alt={img.alt} loading="lazy" />
+                  {img.caption && <p className="image-carousel-caption">{img.caption}</p>}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      {count > 1 && (
-        <>
-          <button
-            type="button"
-            className="image-carousel-arrow image-carousel-arrow-prev"
-            onClick={scrollPrev}
-            aria-label="Previous photo"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            className="image-carousel-arrow image-carousel-arrow-next"
-            onClick={scrollNext}
-            aria-label="Next photo"
-          >
-            ›
-          </button>
-        </>
-      )}
+        {count > 1 && (
+          <>
+            <button
+              type="button"
+              className="image-carousel-arrow image-carousel-arrow-prev"
+              onClick={scrollPrev}
+              aria-label="Previous photo"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              className="image-carousel-arrow image-carousel-arrow-next"
+              onClick={scrollNext}
+              aria-label="Next photo"
+            >
+              ›
+            </button>
+          </>
+        )}
+      </div>
 
       {count > 1 && (
         <div className="image-carousel-dots" role="tablist" aria-label="Photo gallery navigation">

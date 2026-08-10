@@ -39,7 +39,7 @@ export default function SpaceDetailPage({
         </div>
       </section>
 
-      <ImageCarousel images={photos} className="space-gallery-photo" />
+      <ImageCarousel images={photos} />
 
       <section className="space-features">
         <div className="container">
