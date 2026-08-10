@@ -10,6 +10,18 @@
   position: relative;
 }
 
+/* 3 or fewer photos: no paging needed, so lay every photo out evenly
+   instead of the carousel viewport/arrows/dots. */
+.image-carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.image-carousel-grid .image-carousel-frame {
+  height: 100%;
+}
+
 .image-carousel-viewport {
   overflow: hidden;
 }
