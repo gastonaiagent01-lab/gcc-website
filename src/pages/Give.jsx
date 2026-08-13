@@ -33,21 +33,22 @@ const testimonials = [
       'The low-cost rent with utilities provided for our space has allowed us to keep our overhead low. This alone allows us to put more of our money into our programs. Also, I appreciate the group meetings with all the agencies who are part of the GCC family, affording us the opportunity to partner with other service-oriented agencies that benefit our surrounding community.',
     name: 'Diana Baker',
     role: 'CEO/Co-Founder, Kids U',
-    initials: 'DB',
+    photo: '/images/live/testimonial-diana-baker.webp',
   },
   {
     quote:
       'GCC offers more than a space to rent; it provides practical support for ministry growth & is an epicenter of diverse ministries serving diverse communities.',
     name: 'Dennis Page',
     role: 'COO, Gateway of Grace',
-    initials: 'DP',
+    photo: '/images/live/testimonial-gateway-of-grace.webp',
+    photoFit: 'logo',
   },
   {
     quote:
       'Being part of a community where churches & nonprofits can work together to love & serve the same community is unheard of. What happens in this place is special & amazing!',
     name: 'Jose Almanza',
     role: 'Pastor, Centro Cristiano Biblico Metroplex',
-    initials: 'JA',
+    photo: '/images/live/testimonial-jose-almanza.webp',
   },
 ];
 
@@ -122,7 +123,14 @@ export default function Give() {
           <div className="give-testimonials-grid">
             {testimonials.map((item) => (
               <div key={item.name} className="give-testimonials-card">
-                <div className="give-testimonials-avatar">{item.initials}</div>
+                <img
+                  className={`give-testimonials-avatar${
+                    item.photoFit === 'logo' ? ' give-testimonials-avatar-logo' : ''
+                  }`}
+                  src={item.photo}
+                  alt={item.photoFit === 'logo' ? `${item.role} logo` : item.name}
+                  loading="lazy"
+                />
                 <p className="give-testimonials-quote">&ldquo;{item.quote}&rdquo;</p>
                 <p className="give-testimonials-name">{item.name}</p>
                 <p className="give-testimonials-role">{item.role}</p>
