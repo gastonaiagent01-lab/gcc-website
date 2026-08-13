@@ -53,10 +53,122 @@ const monthlyImpact = [
   },
 ];
 
-const tenantPlaceholders = Array.from({ length: 4 }, () => ({
-  name: '[Q3 — Tenant name TBD]',
-  type: '[Organization type]',
-}));
+const communityOrgs = [
+  {
+    name: 'Gateway of Grace',
+    type: 'Community Partner',
+    link: 'https://www.gatewayofgrace.org/',
+    logo: '/images/live/tenants/gateway-of-grace.webp',
+  },
+  {
+    name: 'Full Circle Bakery',
+    type: 'Community Partner',
+    link: 'https://www.fullcircletexas.com/',
+    logo: '/images/live/tenants/full-circle-bakery.webp',
+  },
+  {
+    name: 'Bethesda Hope Ministries',
+    type: 'Community Partner',
+    link: 'https://www.bethesdahopeministries.org/',
+    logo: '/images/live/tenants/bethesda-hope-ministries.webp',
+  },
+  {
+    name: 'Bakke Graduate University',
+    type: 'Community Partner',
+    link: 'https://bgu.edu/',
+    logo: '/images/live/tenants/bakke-graduate-university.webp',
+  },
+  {
+    name: 'Baptist News Global',
+    type: 'Community Partner',
+    link: 'https://baptistnews.com/more/about/',
+    logo: '/images/live/tenants/baptist-news-global.webp',
+  },
+  {
+    name: 'HHM Health - Dental Office',
+    type: 'Community Partner',
+    link: 'https://www.hhmhealth.org/dental/',
+    logo: '/images/live/tenants/hhm-health-dental-office.webp',
+  },
+  {
+    name: 'Kids U',
+    type: 'Community Partner',
+    link: 'https://kids-u.org/',
+    logo: '/images/live/tenants/kids-u.webp',
+  },
+  {
+    name: 'Light of Hope Immigration Law Center',
+    type: 'Community Partner',
+    link: 'https://www.lohimmigration.org/index.html',
+    logo: '/images/live/tenants/light-of-hope-immigration-law-center.webp',
+  },
+  {
+    name: 'Friends of MLK',
+    type: 'Community Partner',
+    link: 'https://friendsofmlk.org/',
+    logo: '/images/live/tenants/friends-of-mlk.webp',
+  },
+  {
+    name: 'Literacy ConneXus',
+    type: 'Community Partner',
+    link: 'https://www.literacyconnexus.org/',
+    logo: '/images/live/tenants/literacy-connexus.webp',
+  },
+  {
+    name: 'Familia de la Fe',
+    type: 'Congregation',
+    link: 'https://www.facebook.com/people/Familia-De-La-Fe/61575699068916/#',
+    logo: '/images/live/tenants/familia-de-la-fe.webp',
+  },
+  {
+    name: 'Full Gospel Assembly International Ministry',
+    type: 'Congregation',
+    link: 'https://www.facebook.com/fgaimdallas/',
+    logo: '/images/live/tenants/full-gospel-assembly-international-ministry.webp',
+  },
+  {
+    name: 'Agape Baptist Church',
+    type: 'Congregation',
+    link: 'https://www.facebook.com/agapebcdallas/',
+    logo: '/images/live/tenants/agape-baptist-church.webp',
+  },
+  {
+    name: 'Iglesia INNOVA',
+    type: 'Congregation',
+    link: 'https://www.facebook.com/healinghandscchurch/',
+    logo: '/images/live/tenants/iglesia-innova.webp',
+  },
+  {
+    name: 'Hope Outreach & Integration Ministries International',
+    type: 'Congregation',
+    link: 'mailto:ksimisi@yahoo.com?subject=Inquiry',
+    logo: '/images/live/tenants/hope-outreach-integration-ministries-international.webp',
+  },
+  {
+    name: 'Iglesia Bautista La Promesa',
+    type: 'Congregation',
+    link: 'mailto:ricespinal@yahoo?subject=Church%20Inquiry',
+    logo: '/images/live/tenants/iglesia-bautista-la-promesa.webp',
+  },
+  {
+    name: 'Gaston Oaks Baptist Church',
+    type: 'Congregation',
+    link: 'https://www.facebook.com/profile.php?id=61564036615704',
+    logo: '/images/live/tenants/gaston-oaks-baptist-church.webp',
+  },
+  {
+    name: 'Centro Cristiano Biblico Metroplex',
+    type: 'Congregation',
+    link: 'mailto:jalmanza214@yahoo.com?subject=Church%20Inquiry',
+    logo: '/images/live/tenants/centro-cristiano-biblico-metroplex.webp',
+  },
+  {
+    name: 'African Fellowship Church',
+    type: 'Congregation',
+    link: 'mailto:patricknyanda14@gmail.com?subject=Church%20Inquiry',
+    logo: '/images/live/tenants/african-fellowship-church.webp',
+  },
+];
 
 const waysToHelp = [
   {
@@ -171,16 +283,23 @@ export default function FriendsOfGaston() {
             important work for Dallas families.
           </p>
           <div className="fog-tenant-grid">
-            {tenantPlaceholders.map((tenant, i) => (
-              <div key={i} className="fog-tenant-card">
-                <div className="fog-tenant-logo" />
-                <p className="fog-tenant-name">{tenant.name}</p>
-                <p className="fog-tenant-type">{tenant.type}</p>
-              </div>
+            {communityOrgs.map((org) => (
+              <a
+                key={org.name}
+                href={org.link}
+                className="fog-tenant-card"
+                target={org.link.startsWith('mailto:') ? undefined : '_blank'}
+                rel={org.link.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+              >
+                <img className="fog-tenant-logo" src={org.logo} alt={`${org.name} logo`} />
+                <p className="fog-tenant-name">{org.name}</p>
+                <p className="fog-tenant-type">{org.type}</p>
+              </a>
             ))}
           </div>
           <p className="fog-tenants-note">
-            [Q3 — Full tenant list pending directory data from board]
+            Sourced from our Services page directory — reach out to any organization directly to
+            learn more.
           </p>
         </div>
       </section>
