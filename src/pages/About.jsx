@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
-import { teamMembers, values } from './aboutContent';
+import { mission, teamMembers, values } from './aboutContent';
 import './About.css';
 
 export default function About() {
@@ -14,6 +14,16 @@ export default function About() {
             A faith-rooted nonprofit providing affordable, mission-aligned space to
             organizations strengthening the Dallas community.
           </p>
+        </div>
+      </section>
+
+      <section className="about-mission">
+        <div className="container about-mission-inner">
+          <p className="eyebrow about-mission-eyebrow">{mission.eyebrow}</p>
+          <blockquote className="about-mission-quote">
+            &ldquo;{mission.quote}&rdquo;
+            <cite className="about-mission-attribution">— {mission.attribution}</cite>
+          </blockquote>
         </div>
       </section>
 
@@ -56,7 +66,7 @@ export default function About() {
         <div className="container">
           <p className="eyebrow about-leadership-eyebrow">Leadership</p>
           <h2 className="about-leadership-title">Meet the Team</h2>
-          <div className="team-grid">
+          <div className="team-list">
             {teamMembers.map((member) => (
               <div key={member.name} className="team-card">
                 {member.photo && (
@@ -69,6 +79,13 @@ export default function About() {
                 <div className="team-card-body">
                   <p className="team-card-name">{member.name}</p>
                   <p className="team-card-role">{member.role}</p>
+                  {member.bio && (
+                    <div className="team-card-bio">
+                      {member.bio.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
