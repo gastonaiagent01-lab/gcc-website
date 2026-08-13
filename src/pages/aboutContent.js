@@ -1,7 +1,13 @@
-// Copy sourced from Figma file 03, About frame (node 30:2), 2026-08-07.
+// Copy sourced from the live gastonchristianctr.org/about page, 2026-08-13 (GAS-62).
+// Kevin Pate is the only board/staff member with a real headshot on the live site;
+// everyone else renders without a photo per the issue's instructions.
 export const teamMembers = [
   { name: 'Carolyn Porterfield', role: 'Board Member and Chair of Personnel Committee' },
-  { name: 'Kevin Pate', role: 'Executive Director' },
+  {
+    name: 'Kevin Pate',
+    role: 'Executive Director',
+    photo: '/images/live/team-kevin-pate.webp',
+  },
   { name: 'Jess Wade', role: 'Member and Chair of the Board of Directors' },
   {
     name: 'Mark Wingfield',

@@ -100,10 +100,10 @@
 }
 
 .team-card-photo {
-  min-height: 200px;
-  border-radius: 0;
-  background: rgba(19, 112, 175, 0.15);
-  color: var(--color-navy-700);
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .team-card-body {

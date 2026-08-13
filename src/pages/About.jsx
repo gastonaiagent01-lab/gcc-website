@@ -59,7 +59,13 @@ export default function About() {
           <div className="team-grid">
             {teamMembers.map((member) => (
               <div key={member.name} className="team-card">
-                <div className="placeholder-photo team-card-photo">[PHOTO NEEDED]</div>
+                {member.photo && (
+                  <img
+                    className="team-card-photo"
+                    src={member.photo}
+                    alt={member.name}
+                  />
+                )}
                 <div className="team-card-body">
                   <p className="team-card-name">{member.name}</p>
                   <p className="team-card-role">{member.role}</p>
