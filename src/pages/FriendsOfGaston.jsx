@@ -24,6 +24,35 @@ const valueProps = [
   },
 ];
 
+const monthlyImpact = [
+  {
+    amount: '$10',
+    title: 'Light a Room',
+    description: 'Helps power and light a shared room for a week.',
+  },
+  {
+    amount: '$25',
+    title: 'Support a Seat',
+    description: "Covers utilities for one regular community member's weekly use.",
+  },
+  {
+    amount: '$50',
+    title: 'Sustain a Space',
+    description: 'Offsets monthly utilities for a small suite or office.',
+  },
+  {
+    amount: '$100',
+    title: 'Empower a Ministry',
+    description: 'Helps subsidize rent + utilities for a nonprofit or congregation.',
+  },
+  {
+    amount: '$250',
+    title: 'Bless a Wing',
+    description:
+      "Supports a wing's operational costs such as electricity, HVAC, water, janitorial services, and shared costs.",
+  },
+];
+
 const tenantPlaceholders = Array.from({ length: 4 }, () => ({
   name: '[Q3 — Tenant name TBD]',
   type: '[Organization type]',
@@ -62,27 +91,15 @@ export default function FriendsOfGaston() {
         </div>
       </section>
 
-      <img
-        className="placeholder-photo fog-hero-photo"
-        src="/images/live/friends-of-gaston-hero.webp"
-        alt="Gaston Christian Center community"
-      />
-
-      <section className="fog-why">
-        <div className="container">
-          <p className="eyebrow fog-why-eyebrow">Monthly Giving</p>
-          <h2 className="fog-why-title">Join the Movement in Monthly Giving</h2>
-          <p className="fog-why-body">
+      <section
+        className="fog-photo-intro"
+        style={{ backgroundImage: 'url(/images/live/friends-of-gaston-hero.webp)' }}
+      >
+        <div className="container fog-photo-intro-inner">
+          <p className="fog-photo-intro-body">
             Friends of Gaston is a monthly giving movement composed of passionate community
             members who help sustain the Gaston Christian Center — room by room, light by light,
             life by life.
-          </p>
-          <button type="button" className="btn btn-primary fog-give-btn" disabled>
-            Give Monthly [CONFIRM — Q8 GiveButter flow]
-          </button>
-          <p className="fog-processor-note">
-            Donations are processed securely through our partner in fundraising, GiveButter
-            (givebutter.com).
           </p>
 
           <div className="fog-benefits">
@@ -94,6 +111,16 @@ export default function FriendsOfGaston() {
             </ul>
           </div>
 
+          <a href="#give" className="btn btn-primary fog-give-btn">
+            Give Monthly
+          </a>
+        </div>
+      </section>
+
+      <section className="fog-why">
+        <div className="container">
+          <p className="eyebrow fog-why-eyebrow">The Impact</p>
+          <h2 className="fog-why-title">Why Monthly Giving Matters</h2>
           <div className="fog-value-grid">
             {valueProps.map((prop) => (
               <div key={prop.title} className="fog-value-card">
@@ -102,6 +129,39 @@ export default function FriendsOfGaston() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="fog-give-section" id="give">
+        <div className="container">
+          <p className="eyebrow fog-give-eyebrow">Recurring Monthly Gift</p>
+          <h2 className="fog-give-title">Choose Your Monthly Gift</h2>
+          <p className="fog-give-subtitle">
+            Every gift below renews automatically each month — pick an amount that fits your
+            budget and helps GCC plan ahead with confidence.
+          </p>
+          <span className="fog-recurring-badge">&#x21bb; Recurring donation — renews monthly</span>
+
+          <div className="fog-give-grid">
+            {monthlyImpact.map((item) => (
+              <div key={item.amount} className="fog-give-card">
+                <p className="fog-give-card-amount">{item.amount}</p>
+                <p className="fog-give-card-title">{item.title}</p>
+                <p className="fog-give-card-description">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="fog-give-embed-note">
+            GiveButter donation form embeds here (account: OvV8eRSSJod8OvPn), pre-set to a
+            recurring monthly gift. Needs the real embed snippet from GiveButter before this goes
+            live.
+          </div>
+
+          <p className="fog-processor-note">
+            Donations are processed securely through our partner in fundraising, GiveButter
+            (givebutter.com).
+          </p>
         </div>
       </section>
 
