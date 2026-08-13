@@ -27,6 +27,30 @@ const impact = [
   },
 ];
 
+const testimonials = [
+  {
+    quote:
+      'The low-cost rent with utilities provided for our space has allowed us to keep our overhead low. This alone allows us to put more of our money into our programs. Also, I appreciate the group meetings with all the agencies who are part of the GCC family, affording us the opportunity to partner with other service-oriented agencies that benefit our surrounding community.',
+    name: 'Diana Baker',
+    role: 'CEO/Co-Founder, Kids U',
+    initials: 'DB',
+  },
+  {
+    quote:
+      'GCC offers more than a space to rent; it provides practical support for ministry growth & is an epicenter of diverse ministries serving diverse communities.',
+    name: 'Dennis Page',
+    role: 'COO, Gateway of Grace',
+    initials: 'DP',
+  },
+  {
+    quote:
+      'Being part of a community where churches & nonprofits can work together to love & serve the same community is unheard of. What happens in this place is special & amazing!',
+    name: 'Jose Almanza',
+    role: 'Pastor, Centro Cristiano Biblico Metroplex',
+    initials: 'JA',
+  },
+];
+
 const otherWays = [
   {
     title: 'Friends of Gaston',
@@ -84,6 +108,24 @@ export default function Give() {
               <div key={item.amount} className="give-impact-item">
                 <p className="give-impact-amount">{item.amount}</p>
                 <p className="give-impact-description">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="give-testimonials">
+        <div className="container">
+          <h2 className="give-testimonials-title">
+            Make an <span className="give-testimonials-title-accent">impact</span> today
+          </h2>
+          <div className="give-testimonials-grid">
+            {testimonials.map((item) => (
+              <div key={item.name} className="give-testimonials-card">
+                <div className="give-testimonials-avatar">{item.initials}</div>
+                <p className="give-testimonials-quote">&ldquo;{item.quote}&rdquo;</p>
+                <p className="give-testimonials-name">{item.name}</p>
+                <p className="give-testimonials-role">{item.role}</p>
               </div>
             ))}
           </div>
