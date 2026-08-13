@@ -22,7 +22,6 @@ export const findYourSpaceLinks = [
 
 export const giveLinks = [
   { label: 'Give', to: routes.give },
-  { label: 'Other Ways to Give', to: `${routes.give}#other-ways` },
   { label: 'Friends of Gaston', to: routes.friendsOfGaston },
 ];
 
