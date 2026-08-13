@@ -84,6 +84,31 @@ export default function Give() {
         </div>
       </section>
 
+      <section className="give-testimonials">
+        <div className="container">
+          <h2 className="give-testimonials-title">
+            Make an <span className="give-testimonials-title-accent">impact</span> today
+          </h2>
+          <div className="give-testimonials-grid">
+            {testimonials.map((item) => (
+              <div key={item.name} className="give-testimonials-card">
+                <img
+                  className={`give-testimonials-avatar${
+                    item.photoFit === 'logo' ? ' give-testimonials-avatar-logo' : ''
+                  }`}
+                  src={item.photo}
+                  alt={item.photoFit === 'logo' ? `${item.role} logo` : item.name}
+                  loading="lazy"
+                />
+                <p className="give-testimonials-quote">&ldquo;{item.quote}&rdquo;</p>
+                <p className="give-testimonials-name">{item.name}</p>
+                <p className="give-testimonials-role">{item.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="give-body">
         <div className="container give-columns">
           <div className="give-form">
@@ -109,31 +134,6 @@ export default function Give() {
               <div key={item.amount} className="give-impact-item">
                 <p className="give-impact-amount">{item.amount}</p>
                 <p className="give-impact-description">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="give-testimonials">
-        <div className="container">
-          <h2 className="give-testimonials-title">
-            Make an <span className="give-testimonials-title-accent">impact</span> today
-          </h2>
-          <div className="give-testimonials-grid">
-            {testimonials.map((item) => (
-              <div key={item.name} className="give-testimonials-card">
-                <img
-                  className={`give-testimonials-avatar${
-                    item.photoFit === 'logo' ? ' give-testimonials-avatar-logo' : ''
-                  }`}
-                  src={item.photo}
-                  alt={item.photoFit === 'logo' ? `${item.role} logo` : item.name}
-                  loading="lazy"
-                />
-                <p className="give-testimonials-quote">&ldquo;{item.quote}&rdquo;</p>
-                <p className="give-testimonials-name">{item.name}</p>
-                <p className="give-testimonials-role">{item.role}</p>
               </div>
             ))}
           </div>
