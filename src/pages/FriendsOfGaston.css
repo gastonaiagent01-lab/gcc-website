@@ -33,14 +33,14 @@
     ),
     url('/images/live/friends-of-gaston-hero.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center 15%;
   min-height: 460px;
   display: flex;
   align-items: center;
   padding: 56px 0;
 }
 
-.fog-photo-intro-inner {
+.fog-photo-intro .fog-photo-intro-inner {
   max-width: 620px;
 }
 

@@ -91,10 +91,7 @@ export default function FriendsOfGaston() {
         </div>
       </section>
 
-      <section
-        className="fog-photo-intro"
-        style={{ backgroundImage: 'url(/images/live/friends-of-gaston-hero.webp)' }}
-      >
+      <section className="fog-photo-intro">
         <div className="container fog-photo-intro-inner">
           <p className="fog-photo-intro-body">
             Friends of Gaston is a monthly giving movement composed of passionate community
