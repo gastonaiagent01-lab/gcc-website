@@ -27,35 +27,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="about-history">
-        <div className="container about-history-columns">
-          <div className="about-history-text">
-            <p className="eyebrow about-history-eyebrow">Our History</p>
-            <h2 className="about-history-title">
-              Rooted in Faith,
-              <br />
-              Built for Community
-            </h2>
-            <p>
-              Gaston Christian Center has served the South Dallas community for over fifteen
-              years, beginning as a ministry of Gaston Avenue Baptist Church with a conviction:
-              that space is a resource, and making it accessible multiplies the good
-              organizations can do.
-            </p>
-            <p>
-              What began as shared office space for a handful of local ministries has grown
-              into a multi-tenant campus offering medical suites, office space, event rooms,
-              and church facilities — reducing overhead so organizations can focus on people.
-            </p>
-          </div>
-          <img
-            className="placeholder-photo about-history-photo"
-            src="/images/live/about-facility.webp"
-            alt="Gaston Avenue Baptist Church, Dallas, early 1900s"
-          />
-        </div>
-      </section>
-
       <section className="about-leadership">
         <div className="container">
           <p className="eyebrow about-leadership-eyebrow">Leadership</p>
@@ -84,6 +55,35 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="about-history">
+        <div className="container about-history-columns">
+          <div className="about-history-text">
+            <p className="eyebrow about-history-eyebrow">Our History</p>
+            <h2 className="about-history-title">
+              Rooted in Faith,
+              <br />
+              Built for Community
+            </h2>
+            <p>
+              Gaston Christian Center has served the South Dallas community for over fifteen
+              years, beginning as a ministry of Gaston Avenue Baptist Church with a conviction:
+              that space is a resource, and making it accessible multiplies the good
+              organizations can do.
+            </p>
+            <p>
+              What began as shared office space for a handful of local ministries has grown
+              into a multi-tenant campus offering medical suites, office space, event rooms,
+              and church facilities — reducing overhead so organizations can focus on people.
+            </p>
+          </div>
+          <img
+            className="placeholder-photo about-history-photo"
+            src="/images/live/about-facility.webp"
+            alt="Gaston Avenue Baptist Church, Dallas, early 1900s"
+          />
         </div>
       </section>
 
