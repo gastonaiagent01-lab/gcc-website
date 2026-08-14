@@ -23,8 +23,12 @@
   height: 100%;
 }
 
+/* Rounds the outer edges where peeking side slides get clipped by the
+   viewport, so those cut edges match the rounded corners on the fully
+   visible card instead of looking square. */
 .image-carousel-viewport {
   overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
 /* Embla's recommended spacing pattern: gap lives on each slide (margin-left
