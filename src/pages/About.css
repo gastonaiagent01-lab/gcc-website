@@ -86,18 +86,13 @@
 }
 
 .about-history-photo {
-  min-height: 460px;
   background: rgba(19, 112, 175, 0.15);
   color: var(--color-navy-700);
 }
 
-.about-timeline-placeholder {
-  border: 2px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-cream-50);
-  color: var(--color-text-muted);
-  font-size: 14px;
-  padding: 32px;
+.about-history-columns img.about-history-photo {
+  aspect-ratio: 1036 / 650;
+  height: auto;
 }
 
 .about-leadership {

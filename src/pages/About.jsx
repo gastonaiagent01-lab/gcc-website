@@ -54,12 +54,6 @@ export default function About() {
             alt="Gaston Avenue Baptist Church, Dallas, early 1900s"
           />
         </div>
-        <div className="container">
-          <div className="about-timeline-placeholder">
-            [TIMELINE NEEDED] Visual history spanning 1990–2025 — GCC to supply period images
-            and captions.
-          </div>
-        </div>
       </section>
 
       <section className="about-leadership">
