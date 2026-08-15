@@ -1,6 +1,70 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
+import HeroCarousel from '../components/HeroCarousel';
 import './Home.css';
+
+const heroSlides = [
+  {
+    src: '/images/live/hero-01-hands.webp',
+    alt: 'Hands joined together in a circle at Gaston Christian Center',
+    caption: 'Community and unity at the heart of everything we do',
+  },
+  {
+    src: '/images/live/hero-02-podium.webp',
+    alt: 'Speakers addressing an audience at a Gaston Christian Center event',
+    caption: 'Hosting gatherings that build lasting connections',
+  },
+  {
+    src: '/images/live/hero-03-medical.webp',
+    alt: 'Medical staff assisting a patient by phone in a tenant medical suite',
+    caption: 'On-site medical care for our community',
+  },
+  {
+    src: '/images/live/hero-04-kids-praying.webp',
+    alt: 'Children praying together before a meal',
+    caption: 'New Roots families sharing a meal together',
+  },
+  {
+    src: '/images/live/hero-05-conference-room.webp',
+    alt: 'Conference room available for tenant use',
+    caption: 'Flexible meeting space for tenant organizations',
+  },
+  {
+    src: '/images/live/hero-06-pantry-truck.webp',
+    alt: 'Volunteer at the Community Pantry truck',
+    caption: 'Delivering food access to neighbors in need',
+  },
+  {
+    src: '/images/live/hero-07-kid-closeup.webp',
+    alt: 'Smiling child participating in a Gaston Christian Center program',
+    caption: 'Every child is welcomed and valued in our programs',
+  },
+  {
+    src: '/images/live/hero-08-banquet.webp',
+    alt: 'Fellowship Hall set up with tables for an event',
+    caption: 'Fellowship Hall set for a special event',
+  },
+  {
+    src: '/images/live/hero-09-balloon.webp',
+    alt: 'Two women celebrating together at a Gaston Christian Center event',
+    caption: 'Celebrating milestones with our GCC family',
+  },
+  {
+    src: '/images/live/hero-10-earpiercing.webp',
+    alt: 'Volunteer providing hands-on care to a community member',
+    caption: 'Hands-on care and support for our neighbors',
+  },
+  {
+    src: '/images/live/hero-11-classroom.webp',
+    alt: 'Classroom space set up for a training session',
+    caption: 'Classroom space built for growth and learning',
+  },
+  {
+    src: '/images/live/hero-12-steeple.webp',
+    alt: 'Church steeple against a blue sky',
+    caption: 'A place for worship, ceremony, and outreach',
+  },
+];
 
 const spaceCards = [
   {
@@ -63,11 +127,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <img
-            className="placeholder-photo hero-photo"
-            src="/images/live/hero-home.webp"
-            alt="Gaston Christian Center community"
-          />
+          <HeroCarousel slides={heroSlides} className="placeholder-photo hero-photo" />
         </div>
       </section>
 
