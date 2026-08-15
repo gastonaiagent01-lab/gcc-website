@@ -39,7 +39,7 @@
 .hero-photo {
   background: rgba(19, 112, 175, 0.2);
   color: var(--color-navy-200);
-  min-height: 400px;
+  aspect-ratio: 3 / 2;
 }
 
 .mission-strip {
