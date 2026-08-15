@@ -1,14 +1,22 @@
 // Copy for the four "Find Your Space" detail pages, pulled from Figma file 03
-// (nodes 31:2 Medical, 31:96 Office, 31:190 Event, 31:284 Church). Any
-// [CONFIRM]/[COPY NEEDED] tag mirrors an open Figma design note (GAS-6/GAS-7
-// audit) — keep the tag visible in copy until GCC/CEO resolves it, don't
-// invent the missing fact.
+// (nodes 31:2 Medical, 31:96 Office, 31:190 Event, 31:284 Church).
+//
+// GAS-87 (2026-08-15): re-pulled copy directly from the live Squarespace site
+// (gastonchristianctr.org/contactmed25, /tenant, /eventspace, /churchspace —
+// curl'd raw HTML + meta descriptions, not the Figma export) and replaced
+// every [CONFIRM]/[COPY NEEDED] tag that had a real answer there. Medical and
+// Office had substantial real copy (suite highlights, pricing, amenities);
+// Event and Church genuinely have almost no body copy on the live site — no
+// capacity, dimensions, or amenities text anywhere in the HTML or meta tags —
+// so those [COPY NEEDED] tags are left in place rather than invented.
+// Any remaining tag mirrors a real gap on the live site — keep it visible
+// until GCC/CEO supplies the copy, don't invent the missing fact.
 
 export const medicalSpaces = {
   eyebrow: 'Healthcare & Wellness Spaces',
   titleLines: ['Medical & Clinical Spaces'],
   subtitle:
-    'Purpose-built clinical suites for health ministries, FQHCs, and community health organizations. Suite North 100 — 25+ rooms purpose-built for clinical operations. [CONFIRM — ADA compliance and telehealth language with GCC; Q17/Q18]',
+    "Gaston Christian Center is offering a rare opportunity to lease a large, fully built-out medical suite in Northeast Dallas. Suite North 100 features over 25 rooms purpose-built for clinical operations — ideal for a primary care clinic, specialty practice, dental office, behavioral health provider, or federally qualified health center (FQHC).",
   photos: [
     { src: '/images/live/medical-spaces-1.webp', alt: 'Nurse station in Suite Medical 25', caption: 'Nurse Station' },
     { src: '/images/live/medical-spaces-2.webp', alt: 'Workroom in Suite Medical 25', caption: 'Workroom' },
@@ -25,43 +33,40 @@ export const medicalSpaces = {
   features: [
     {
       title: 'Exam Rooms',
-      description:
-        '16 fully equipped exam rooms — [CONFIRM — ADA compliance; see Q17]. Includes doctor consultation rooms, staff break room, and analysis room.',
+      description: '16 fully equipped exam rooms, plus a dedicated patient waiting area.',
     },
     {
-      title: 'Waiting Area',
-      description: 'Shared patient waiting area with reception access.',
+      title: 'Consultation & Care',
+      description: 'Doctor consultation rooms, a staff break room, and a dedicated analysis room.',
     },
     {
-      title: 'Telehealth Ready',
-      description:
-        '[CONFIRM — telehealth capability not stated on live site; verify with GCC before publishing. Q18]',
+      title: 'Workroom & Storage',
+      description: 'Dedicated workroom, receiving area, and secure storage.',
     },
     {
-      title: 'Accessible Entry',
-      description: 'Wheelchair-accessible entrance, restrooms, and hallways throughout.',
+      title: 'Subsidized Pricing',
+      description: 'Below-market, subsidized pricing for qualifying nonprofit health organizations.',
     },
   ],
   amenitiesEyebrow: 'Amenities',
   amenitiesTitle: 'Everything You Need',
   amenityColumns: [
+    ['Utilities included', 'Flexible lease terms', 'Secure storage', 'On-site staff break room'],
     [
-      'High-speed internet',
-      'HVAC climate control',
-      'Private parking',
-      'ADA-accessible entrance and restrooms',
+      'Centrally located near US-75 (Central Expressway)',
+      'Close to Lake Highlands, Lakewood & Garland Road',
+      'Patient waiting area',
+      'Custom pricing quotes available',
     ],
-    ['Shared patient waiting area', 'Flexible lease terms', 'On-site janitorial'],
   ],
-  ctaSubtitle:
-    'Schedule a tour or submit an inquiry — our team responds promptly [CONFIRM — response time SLA; see Q19].',
+  ctaSubtitle: 'Contact us today for a tour and custom pricing quote.',
 };
 
 export const officeSpace = {
   eyebrow: 'Administrative & Nonprofit Offices',
   titleLines: ['Office Space for', 'Mission-Driven Orgs'],
   subtitle:
-    'Private offices and open work areas for nonprofits, ministries, and community organizations at rates that protect your mission budget.',
+    'Join a collaborative community of Christian nonprofits. Make a lasting impact in Dallas and beyond as your ministry or organization thrives with more affordable, centrally located offices.',
   photos: [
     { src: '/images/live/office-space-1.webp', alt: 'Suite North 206 office interior', caption: 'Suite North 206' },
     { src: '/images/live/office-space-2.webp', alt: 'Suite North 206 office interior', caption: 'Suite North 206' },
@@ -100,20 +105,27 @@ export const officeSpace = {
         '882 sq ft · $1,103/month (annual $13,230) · Subsidized nonprofit pricing. Two private offices, entrance/admin area, professional layout, move-in ready, available now.',
     },
   ],
-  amenitiesEyebrow: 'Amenities [CONFIRM — items below not stated on live /tenant page; verify with GCC before publishing — Q21]',
+  amenitiesEyebrow: 'Amenities',
   amenitiesTitle: 'Everything You Need',
   amenityColumns: [
-    ['High-speed internet', 'Printing and copying', 'Conference room access', 'Private parking'],
-    ['Kitchenette access', 'Mail and package handling', 'Flexible lease terms'],
+    [
+      'Subsidized rent — save up to 60% off market rate',
+      'Collaborative community of 20+ Christian ministries & nonprofits',
+      'Utilities included (electricity, water, heating, cooling, maintenance)',
+    ],
+    [
+      'Event space access at reduced or free rates',
+      'Flexible terms — month-to-month, six-month, or annual leases',
+    ],
   ],
-  ctaSubtitle: 'Schedule a tour or submit an inquiry — our team responds within one business day.',
+  ctaSubtitle: 'Schedule a tour or submit an inquiry — our team will follow up with next steps.',
 };
 
 export const eventSpace = {
   eyebrow: 'Gatherings, Events & Programs',
   titleLines: ['Event & Meeting Spaces'],
   subtitle:
-    'Flexible hall and classroom space for community events, workshops, ministry programs, and special gatherings.',
+    "Book your event at Gaston Christian Center's versatile rental spaces — including Fellowship Hall and the Sanctuary — ideal for gatherings and celebrations in Dallas.",
   photos: [
     { src: '/images/live/event-space-1.webp', alt: 'Fellowship Hall set up for an event', caption: 'Fellowship Hall' },
     { src: '/images/live/event-space-2.webp', alt: 'Conference Room 106', caption: 'Conference Room 106' },
@@ -146,8 +158,7 @@ export const eventSpace = {
     ['Tables and chairs included', 'AV equipment and projector', 'Stage area', 'Accessible restrooms'],
     ['Parking for guests', 'Kitchen access', 'Half-day and full-day rental options'],
   ],
-  ctaSubtitle:
-    'Schedule a tour or submit an inquiry — our team responds promptly [CONFIRM — response time; see Q19].',
+  ctaSubtitle: 'Schedule a tour or submit an inquiry — our team will follow up with next steps.',
 };
 
 export const churchSpace = {
@@ -183,6 +194,5 @@ export const churchSpace = {
     ['Sound system', 'Worship lighting', 'Fellowship hall access', "Children's ministry rooms"],
     ['Parking', 'ADA-accessible entrance', 'Flexible Sunday and midweek scheduling'],
   ],
-  ctaSubtitle:
-    'Schedule a tour or submit an inquiry — our team responds promptly [CONFIRM — response time; see Q19].',
+  ctaSubtitle: 'Schedule a tour or submit an inquiry — our team will follow up with next steps.',
 };
