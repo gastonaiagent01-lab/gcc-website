@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
 import ImageCarousel from './ImageCarousel';
+import InquiryForm from './InquiryForm';
 import './SpaceDetailPage.css';
 
 // Shared layout for the four "Find Your Space" detail pages (Medical, Office,
 // Event, Church) — each is hero + gallery + feature grid + amenities + CTA in
 // the Figma design (file 03, pages 31:2 / 31:96 / 31:190 / 31:284).
+//
+// Event and Church pages replace the feature grid + amenities with a
+// booking-inquiry form (interestedSpaces) to match the live site's
+// /eventspace and /churchspace pages, which use a form instead of a feature
+// list for those two space types.
 export default function SpaceDetailPage({
   eyebrow,
   titleLines,
@@ -18,6 +24,7 @@ export default function SpaceDetailPage({
   amenitiesTitle,
   amenityColumns,
   ctaSubtitle,
+  interestedSpaces,
 }) {
   return (
     <>
@@ -41,47 +48,59 @@ export default function SpaceDetailPage({
 
       <ImageCarousel images={photos} />
 
-      <section className="space-features">
-        <div className="container">
-          <p className="eyebrow space-features-eyebrow">{featuresEyebrow}</p>
-          <h2 className="space-features-title">{featuresTitle}</h2>
-          <div className="space-feature-grid">
-            {features.map((feature) => (
-              <div key={feature.title} className="space-feature-card">
-                {feature.href ? (
-                  <a
-                    href={feature.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="space-feature-card-title space-feature-card-link"
-                  >
-                    {feature.title}
-                  </a>
-                ) : (
-                  <p className="space-feature-card-title">{feature.title}</p>
-                )}
-                <p className="space-feature-card-description">{feature.description}</p>
-              </div>
-            ))}
+      {interestedSpaces ? (
+        <section className="space-features">
+          <div className="container">
+            <p className="eyebrow space-features-eyebrow">Book This Space</p>
+            <h2 className="space-features-title">Request Availability</h2>
+            <InquiryForm spaces={interestedSpaces} />
           </div>
-        </div>
-      </section>
-
-      <section className="space-amenities">
-        <div className="container">
-          <p className="eyebrow space-amenities-eyebrow">{amenitiesEyebrow}</p>
-          <h2 className="space-amenities-title">{amenitiesTitle}</h2>
-          <div className="space-amenity-columns">
-            {amenityColumns.map((column, i) => (
-              <ul key={i} className="space-amenity-column">
-                {column.map((item) => (
-                  <li key={item}>{item}</li>
+        </section>
+      ) : (
+        <>
+          <section className="space-features">
+            <div className="container">
+              <p className="eyebrow space-features-eyebrow">{featuresEyebrow}</p>
+              <h2 className="space-features-title">{featuresTitle}</h2>
+              <div className="space-feature-grid">
+                {features.map((feature) => (
+                  <div key={feature.title} className="space-feature-card">
+                    {feature.href ? (
+                      <a
+                        href={feature.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="space-feature-card-title space-feature-card-link"
+                      >
+                        {feature.title}
+                      </a>
+                    ) : (
+                      <p className="space-feature-card-title">{feature.title}</p>
+                    )}
+                    <p className="space-feature-card-description">{feature.description}</p>
+                  </div>
                 ))}
-              </ul>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-amenities">
+            <div className="container">
+              <p className="eyebrow space-amenities-eyebrow">{amenitiesEyebrow}</p>
+              <h2 className="space-amenities-title">{amenitiesTitle}</h2>
+              <div className="space-amenity-columns">
+                {amenityColumns.map((column, i) => (
+                  <ul key={i} className="space-amenity-column">
+                    {column.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <section className="space-cta">
         <div className="container space-cta-inner">

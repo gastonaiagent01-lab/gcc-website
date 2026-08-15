@@ -5,12 +5,13 @@
 // (gastonchristianctr.org/contactmed25, /tenant, /eventspace, /churchspace —
 // curl'd raw HTML + meta descriptions, not the Figma export) and replaced
 // every [CONFIRM]/[COPY NEEDED] tag that had a real answer there. Medical and
-// Office had substantial real copy (suite highlights, pricing, amenities);
-// Event and Church genuinely have almost no body copy on the live site — no
-// capacity, dimensions, or amenities text anywhere in the HTML or meta tags —
-// so those [COPY NEEDED] tags are left in place rather than invented.
-// Any remaining tag mirrors a real gap on the live site — keep it visible
-// until GCC/CEO supplies the copy, don't invent the missing fact.
+// Office had substantial real copy (suite highlights, pricing, amenities).
+// Event and Church have no capacity/dimensions/amenities body copy on the
+// live site — instead, both live pages show a booking-inquiry form in place
+// of a feature grid (see interestedSpaces + InquiryForm), so that's what's
+// reproduced here rather than inventing feature copy that doesn't exist.
+// Any remaining [CONFIRM]/[COPY NEEDED] tag mirrors a real gap on the live
+// site — keep it visible until GCC/CEO supplies the copy, don't invent it.
 
 export const medicalSpaces = {
   eyebrow: 'Healthcare & Wellness Spaces',
@@ -131,34 +132,11 @@ export const eventSpace = {
     { src: '/images/live/event-space-2.webp', alt: 'Conference Room 106', caption: 'Conference Room 106' },
     { src: '/images/live/event-space-3.webp', alt: 'Sanctuary available for events', caption: 'Sanctuary' },
   ],
-  featuresEyebrow: "What's Included",
-  featuresTitle: 'Space Features',
-  features: [
-    {
-      title: 'Fellowship Hall',
-      description: '[COPY NEEDED — Fellowship Hall: capacity, room setup, dimensions; owner: GCC]',
-    },
-    {
-      title: 'Conference Room 106',
-      description: '[COPY NEEDED — Conference Room 106: capacity, room setup, dimensions; owner: GCC]',
-    },
-    {
-      title: 'Sanctuary',
-      description: '[COPY NEEDED — Sanctuary: capacity, room setup, dimensions; owner: GCC]',
-    },
-    {
-      title: 'Catering Access',
-      description: '[COPY NEEDED — catering/kitchen access details; owner: GCC]',
-    },
-  ],
-  amenitiesEyebrow: 'Amenities',
-  amenitiesTitle:
-    'Everything You Need [CONFIRM — items below not verified on live /eventspace; owner: GCC — Q22]',
-  amenityColumns: [
-    ['Tables and chairs included', 'AV equipment and projector', 'Stage area', 'Accessible restrooms'],
-    ['Parking for guests', 'Kitchen access', 'Half-day and full-day rental options'],
-  ],
-  ctaSubtitle: 'Schedule a tour or submit an inquiry — our team will follow up with next steps.',
+  // Matches the live /eventspace page, which shows a booking-inquiry form
+  // (Fellowship Hall / Sanctuary / Room 106 checkboxes) instead of a
+  // feature grid and amenities list.
+  interestedSpaces: ['Fellowship Hall', 'Sanctuary', 'Room 106'],
+  ctaSubtitle: 'Have questions before you book? Reach out and our team will follow up.',
 };
 
 export const churchSpace = {
@@ -170,29 +148,9 @@ export const churchSpace = {
     { src: '/images/live/church-space-1.webp', alt: 'Sanctuary at Gaston Christian Center' },
     { src: '/images/live/church-space-2.webp', alt: 'Worship space at Gaston Christian Center' },
   ],
-  featuresEyebrow: "What's Included",
-  featuresTitle: 'Space Features',
-  features: [
-    { title: 'Sanctuary', description: '[COPY NEEDED — Sanctuary capacity; owner: GCC]' },
-    {
-      title: 'Fellowship Hall',
-      description: '[COPY NEEDED — Fellowship Hall: capacity, use policy; owner: GCC]',
-    },
-    {
-      title: "Children's Ministry",
-      description: "[COPY NEEDED — Children's Ministry: room count, capacity; owner: GCC]",
-    },
-    {
-      title: 'Baptistry Available',
-      description: '[COPY NEEDED — Baptistry: availability, scheduling process; owner: GCC]',
-    },
-  ],
-  amenitiesEyebrow: 'Amenities',
-  amenitiesTitle:
-    'Everything You Need [CONFIRM — items below not verified on live /churchspace; owner: GCC — Q24]',
-  amenityColumns: [
-    ['Sound system', 'Worship lighting', 'Fellowship hall access', "Children's ministry rooms"],
-    ['Parking', 'ADA-accessible entrance', 'Flexible Sunday and midweek scheduling'],
-  ],
-  ctaSubtitle: 'Schedule a tour or submit an inquiry — our team will follow up with next steps.',
+  // Matches the live /churchspace page, which shows a booking-inquiry form
+  // (Fellowship Hall / Sanctuary checkboxes) instead of a feature grid and
+  // amenities list.
+  interestedSpaces: ['Fellowship Hall', 'Sanctuary'],
+  ctaSubtitle: 'Have questions before you book? Reach out and our team will follow up.',
 };
