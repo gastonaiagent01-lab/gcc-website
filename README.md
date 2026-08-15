@@ -49,7 +49,7 @@ All 11 pages are built from their Figma frames and routed: `Home`, `About`, `Med
   `RESEND_API_KEY` in the Vercel project's environment variables** (and `CONTACT_TO_EMAIL` if the
   default `contactus@gastonchristianctr.org` inbox shouldn't receive it). Nothing else is needed
   to go live once that key exists.
-- **Social handles** — Instagram/Facebook/LinkedIn links not yet provided
+- **Instagram handle** — the original site's Instagram footer link pointed at Squarespace's own account (an unconfigured default), so no verified GCC Instagram was carried over; Facebook and LinkedIn are live (GAS-77)
 - **GA4 measurement ID** — not yet provisioned; site sends zero analytics until it is
 - **Services (Q31) and New Roots (Q29) copy** — structural/content decisions still open with GCC; placeholders are intentional, not bugs
 

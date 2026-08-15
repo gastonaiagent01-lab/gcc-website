@@ -47,6 +47,16 @@
   gap: 8px;
 }
 
+.footer-social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-links a {
+  font-size: 13px;
+  color: var(--color-white);
+}
+
 .footer-muted {
   font-size: 12px;
   color: var(--color-amber-100);

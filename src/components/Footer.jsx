@@ -33,8 +33,22 @@ export default function Footer() {
         </div>
         <div className="footer-social">
           <p className="footer-heading">Follow GCC</p>
-          {/* Social handles pending from GCC — see open question in GAS-12 comments */}
-          <p className="footer-muted">Instagram · Facebook · LinkedIn (links pending)</p>
+          <div className="footer-social-links">
+            <a
+              href="https://www.facebook.com/gastonchristiancenter/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.linkedin.com/company/gaston-christian-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
           <p className="footer-muted">Subscribe to our Quarterly Newsletter</p>
         </div>
       </div>
