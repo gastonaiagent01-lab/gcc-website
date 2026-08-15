@@ -8,7 +8,12 @@
   display: grid;
   grid-template-columns: 1.2fr 1.4fr 1fr 1.4fr;
   gap: 32px;
-  padding-bottom: 128px;
+}
+
+/* Higher specificity than .container's `margin: 0 auto` shorthand, which
+   would otherwise zero out margin-bottom (same specificity, later in cascade). */
+.footer > .footer-grid {
+  margin-bottom: 64px;
 }
 
 .footer-logo {
