@@ -1,50 +1,42 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
+import { mission, aboutProgram, getInvolvedCards, faqs } from './newRootsContent';
 import './NewRoots.css';
-
-const PROGRAM_PLACEHOLDER = {
-  title: '[COPY NEEDED — program name; owner: GCC — Q29]',
-  description: '[COPY NEEDED — program description, eligibility, and services offered; owner: GCC — Q29]',
-};
-
-const programs = Array.from({ length: 6 }, () => PROGRAM_PLACEHOLDER);
 
 export default function NewRoots() {
   return (
     <>
       <section className="newroots-hero">
-        <div className="container">
-          <p className="eyebrow newroots-hero-eyebrow">Community Initiative</p>
-          <h1 className="newroots-hero-title">New Roots Initiative</h1>
-          <p className="newroots-hero-subtitle">
-            Helping immigrant and refugee families build new lives in Dallas — connecting
-            community generosity with families who are furnishing homes and finding stability.
-            [CONFIRM Q29 — expanded program scope pending GCC verification]
-          </p>
+        <div className="container newroots-hero-inner">
+          <div className="newroots-hero-text">
+            <p className="eyebrow newroots-hero-eyebrow">Community Initiative</p>
+            <h1 className="newroots-hero-title">New Roots Initiative</h1>
+            <p className="newroots-hero-subtitle">
+              Helping immigrant and refugee families build new lives in Dallas — connecting
+              community generosity with families who are furnishing homes and finding stability.
+            </p>
+          </div>
+          <img
+            className="placeholder-photo newroots-hero-photo"
+            src="/images/live/new-roots-hero.webp"
+            alt="New Roots community program"
+          />
         </div>
       </section>
 
-      <img
-        className="placeholder-photo newroots-hero-photo"
-        src="/images/live/new-roots-hero.webp"
-        alt="New Roots community program"
-      />
+      <section className="newroots-mission">
+        <div className="container">
+          <p className="eyebrow newroots-mission-eyebrow">{mission.eyebrow}</p>
+          <p className="newroots-mission-text">&ldquo;{mission.quote}&rdquo;</p>
+        </div>
+      </section>
 
       <section className="newroots-about">
         <div className="container newroots-about-columns">
           <div className="newroots-about-text">
             <p className="eyebrow newroots-about-eyebrow">The Initiative</p>
             <h2 className="newroots-about-title">Helping Families Build New Roots in Dallas</h2>
-            <p>
-              The New Roots Initiative provides holistic support to refugees, immigrants, and
-              underserved families across Dallas — connecting people with resources,
-              relationships, and opportunities they need to build stable and flourishing lives in
-              their new home.
-            </p>
-            <p className="newroots-copy-needed">
-              [COPY NEEDED — additional program descriptions pending GCC confirmation; owner:
-              GCC — Q29]
-            </p>
+            <p>{aboutProgram.intro}</p>
           </div>
           <img
             className="placeholder-photo newroots-about-photo"
@@ -52,26 +44,64 @@ export default function NewRoots() {
             alt="New Roots participants"
           />
         </div>
+        <div className="container">
+          <div className="newroots-program-grid">
+            {aboutProgram.points.map((point) => (
+              <div key={point.title} className="newroots-program-card">
+                <p className="newroots-program-card-title">{point.title}</p>
+                <p className="newroots-program-card-description">{point.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="newroots-values-row">
+            {aboutProgram.values.map((value) => (
+              <span key={value} className="newroots-values-pill">
+                {value}
+              </span>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <section className="newroots-programs">
+      <section className="newroots-serve" id="volunteer">
         <div className="container">
-          <p className="eyebrow newroots-programs-eyebrow">
-            Programs [CONFIRM Q29 — pending GCC verification]
-          </p>
-          <h2 className="newroots-programs-title">
-            How We Serve
-            <span className="newroots-copy-needed-inline">
-              {' '}
-              [COPY NEEDED — Q29: program list pending GCC confirmation; owner: GCC]
-            </span>
-          </h2>
-          <div className="newroots-program-grid">
-            {programs.map((program, i) => (
-              <div key={i} className="newroots-program-card">
-                <p className="newroots-program-card-title">{program.title}</p>
-                <p className="newroots-program-card-description">{program.description}</p>
+          <p className="eyebrow newroots-serve-eyebrow">Ways to Help</p>
+          <h2 className="newroots-serve-title">Get Involved with New Roots</h2>
+          <div className="newroots-serve-cards">
+            {getInvolvedCards.map((card) => (
+              <div key={card.title} className="newroots-serve-card">
+                <h3 className="newroots-serve-card-title">{card.title}</h3>
+                <p className="newroots-serve-card-description">{card.description}</p>
+                {card.isInternal ? (
+                  <Link to={routes.contact} className="newroots-serve-card-link">
+                    {card.cta}
+                  </Link>
+                ) : (
+                  <a
+                    href={card.href}
+                    className="newroots-serve-card-link"
+                    target={card.href.startsWith('http') ? '_blank' : undefined}
+                    rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {card.cta}
+                  </a>
+                )}
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="newroots-faq">
+        <div className="container">
+          <p className="eyebrow newroots-faq-eyebrow">Questions</p>
+          <h2 className="newroots-faq-title">Frequently Asked Questions</h2>
+          <div className="newroots-faq-list">
+            {faqs.map((faq) => (
+              <details key={faq.question} className="newroots-faq-item">
+                <summary className="newroots-faq-question">{faq.question}</summary>
+                <p className="newroots-faq-answer">{faq.answer}</p>
+              </details>
             ))}
           </div>
         </div>
