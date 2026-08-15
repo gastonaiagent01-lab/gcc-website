@@ -1,6 +1,7 @@
 .footer {
   background: var(--color-navy-900);
   color: var(--color-navy-200);
+  padding-top: 64px;
 }
 
 .footer-grid {
