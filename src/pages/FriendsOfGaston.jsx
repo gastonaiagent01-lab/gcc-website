@@ -318,20 +318,6 @@ export default function FriendsOfGaston() {
           </div>
         </div>
       </section>
-
-      <section className="fog-social">
-        <div className="container fog-social-inner">
-          <h2 className="fog-social-title">Follow Our Story</h2>
-          <p className="fog-social-subtitle">
-            [Q3 — Social handles pending] Connect with us on Facebook, Instagram, and LinkedIn.
-          </p>
-          <div className="fog-social-links">
-            <span className="fog-social-link">Facebook</span>
-            <span className="fog-social-link">Instagram</span>
-            <span className="fog-social-link">LinkedIn</span>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

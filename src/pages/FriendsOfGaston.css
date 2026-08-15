@@ -331,45 +331,6 @@
   color: var(--color-text-muted);
 }
 
-.fog-social {
-  background: var(--color-navy-700);
-  padding: 96px 0;
-}
-
-.fog-social-inner {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.fog-social-title {
-  font-size: 40px;
-  color: var(--color-white);
-}
-
-.fog-social-subtitle {
-  font-size: 18px;
-  line-height: 1.55;
-  color: var(--color-navy-200);
-  max-width: 640px;
-}
-
-.fog-social-links {
-  display: flex;
-  gap: 16px;
-}
-
-.fog-social-link {
-  border: 1.5px solid var(--color-white);
-  border-radius: var(--radius-sm);
-  color: var(--color-white);
-  font-weight: 600;
-  font-size: 15px;
-  padding: 12px 24px;
-}
-
 @media (max-width: 900px) {
   .fog-value-grid,
   .fog-way-grid {
