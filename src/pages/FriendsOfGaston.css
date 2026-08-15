@@ -285,11 +285,6 @@
   color: var(--color-text-muted);
 }
 
-.fog-tenants-note {
-  font-size: 14px;
-  color: var(--color-text-muted);
-}
-
 .fog-become {
   background: var(--color-cream-50);
   padding: 96px 0;

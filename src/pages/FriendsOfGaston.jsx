@@ -297,10 +297,6 @@ export default function FriendsOfGaston() {
               </a>
             ))}
           </div>
-          <p className="fog-tenants-note">
-            Sourced from our Services page directory — reach out to any organization directly to
-            learn more.
-          </p>
         </div>
       </section>
 
