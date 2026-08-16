@@ -19,6 +19,17 @@
   gap: 24px;
 }
 
+/* The carousel's flat 16px padding reads fine for paged mode, where the
+   embla peek effect keeps the visible slide well clear of the edges. The
+   grid shows every photo at full width with no peek, so it needs the same
+   responsive gutter as the rest of the page's sections (.container's
+   --section-x) instead of that flat 16px, or the outer photos butt up
+   against the viewport edge on wider screens. */
+.image-carousel-grid-mode {
+  padding-left: var(--section-x);
+  padding-right: var(--section-x);
+}
+
 .image-carousel-grid .image-carousel-frame {
   height: 100%;
 }

@@ -79,7 +79,7 @@ export default function ImageCarousel({ images, className = '' }) {
   );
 
   return (
-    <div className={`image-carousel ${className}`}>
+    <div className={`image-carousel ${isGrid ? 'image-carousel-grid-mode' : ''} ${className}`}>
       {isGrid ? (
         <div className="image-carousel-grid">
           {images.map((img, i) => (
