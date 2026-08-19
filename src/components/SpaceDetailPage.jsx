@@ -77,7 +77,35 @@ export default function SpaceDetailPage({
                     ) : (
                       <p className="space-feature-card-title">{feature.title}</p>
                     )}
-                    <p className="space-feature-card-description">{feature.description}</p>
+                    {feature.benefits ? (
+                      <>
+                        <ul className="suite-card-benefits">
+                          {feature.benefits.map((benefit) => (
+                            <li key={benefit}>{benefit}</li>
+                          ))}
+                        </ul>
+                        <div className="suite-card-meta">
+                          {feature.contactForPricing ? (
+                            <p className="suite-card-price">Contact for Pricing</p>
+                          ) : (
+                            <>
+                              {feature.sqft && <p className="suite-card-sqft">{feature.sqft}</p>}
+                              {feature.monthlyPrice && (
+                                <p className="suite-card-price">{feature.monthlyPrice}</p>
+                              )}
+                              {feature.annualRate && (
+                                <p className="suite-card-annual">{feature.annualRate}</p>
+                              )}
+                            </>
+                          )}
+                          {feature.pricingNote && (
+                            <p className="suite-card-note">{feature.pricingNote}</p>
+                          )}
+                        </div>
+                      </>
+                    ) : (
+                      <p className="space-feature-card-description">{feature.description}</p>
+                    )}
                   </div>
                 ))}
               </div>

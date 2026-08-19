@@ -80,30 +80,63 @@ export const officeSpace = {
   ],
   featuresEyebrow: 'Available Options',
   featuresTitle: 'Available Suites',
+  // GAS-190: structured per the original Squarespace suite cards (real vertical
+  // bulleted benefits list + separate sqft/price/annual/pricing-note lines)
+  // instead of one flowing description paragraph — restores scannability lost
+  // in the rebuild.
   features: [
     {
       title: 'Suite North 206',
       href: 'https://www.gastonchristianctr.org/contactn206',
-      description:
-        '902 sq ft · $1,127/month (annual $13,530) · Subsidized nonprofit pricing. Three private offices, entrance/admin area, conference room, supply closet.',
+      benefits: [
+        'Three private offices',
+        'Entrance/Admin Area',
+        'Conference room',
+        'Supply closet',
+        'Perfect for growing ministry',
+      ],
+      sqft: '902 sq ft',
+      monthlyPrice: '$1,127/month',
+      annualRate: 'Annual rate: $13,530',
+      pricingNote: 'Subsidized nonprofit pricing',
     },
     {
       title: 'Suite North 208',
       href: 'https://www.gastonchristianctr.org/contactn208',
-      description:
-        '500 sq ft · $625/month (annual $7,500) · Subsidized nonprofit pricing. One large office, entrance/admin area, supply closet.',
+      benefits: ['One large office', 'Entrance/Admin area', 'Supply closet', 'Compact and efficient'],
+      sqft: '500 sq ft',
+      monthlyPrice: '$625/month',
+      annualRate: 'Annual rate: $7,500',
+      pricingNote: 'Subsidized nonprofit pricing',
     },
     {
       title: 'Suite North 207',
       href: 'https://www.gastonchristianctr.org/contactn207',
-      description:
-        'Contact for pricing — custom quote based on number of offices needed. Eight individual offices, adjacent space available, flexible configuration, room to expand, build-to-suit options.',
+      benefits: [
+        'Eight individual offices',
+        'Adjacent space available',
+        'Flexible configuration',
+        'Room to expand',
+        'Build-to-suit options',
+        'Ideal for larger teams',
+      ],
+      contactForPricing: true,
+      pricingNote: 'Custom quote based on number of offices needed',
     },
     {
       title: 'Suite North 210',
       href: 'https://www.gastonchristianctr.org/contactn210',
-      description:
-        '882 sq ft · $1,103/month (annual $13,230) · Subsidized nonprofit pricing. Two private offices, entrance/admin area, professional layout, move-in ready, available now.',
+      benefits: [
+        'Two private offices',
+        'Entrance/Admin area',
+        'Professional layout',
+        'Move-in ready',
+        'Available now',
+      ],
+      sqft: '882 sq ft',
+      monthlyPrice: '$1,103/month',
+      annualRate: 'Annual rate: $13,230',
+      pricingNote: 'Subsidized nonprofit pricing',
     },
   ],
   amenitiesEyebrow: 'Amenities',
