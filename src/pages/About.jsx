@@ -1,29 +1,17 @@
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
-import { mission, teamMembers, values } from './aboutContent';
+import { mission, teamMembers } from './aboutContent';
 import './About.css';
 
 export default function About() {
   return (
     <>
       <section className="about-hero">
-        <div className="container">
-          <p className="eyebrow about-hero-eyebrow">Our Story</p>
-          <h1 className="about-hero-title">About Gaston Christian Center</h1>
+        <div className="container about-hero-inner">
+          <h1 className="about-hero-title">{mission.eyebrow}</h1>
           <p className="about-hero-subtitle">
-            A faith-rooted nonprofit providing affordable, mission-aligned space to
-            organizations strengthening the Dallas community.
+            {mission.quote} &mdash; {mission.attribution}
           </p>
-        </div>
-      </section>
-
-      <section className="about-mission">
-        <div className="container about-mission-inner">
-          <p className="eyebrow about-mission-eyebrow">{mission.eyebrow}</p>
-          <blockquote className="about-mission-quote">
-            &ldquo;{mission.quote}&rdquo;
-            <cite className="about-mission-attribution">— {mission.attribution}</cite>
-          </blockquote>
         </div>
       </section>
 
@@ -52,50 +40,6 @@ export default function About() {
                     </div>
                   )}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="about-history">
-        <div className="container about-history-columns">
-          <div className="about-history-text">
-            <p className="eyebrow about-history-eyebrow">Our History</p>
-            <h2 className="about-history-title">
-              Rooted in Faith,
-              <br />
-              Built for Community
-            </h2>
-            <p>
-              Gaston Christian Center has served the South Dallas community for over fifteen
-              years, beginning as a ministry of Gaston Avenue Baptist Church with a conviction:
-              that space is a resource, and making it accessible multiplies the good
-              organizations can do.
-            </p>
-            <p>
-              What began as shared office space for a handful of local ministries has grown
-              into a multi-tenant campus offering medical suites, office space, event rooms,
-              and church facilities — reducing overhead so organizations can focus on people.
-            </p>
-          </div>
-          <img
-            className="placeholder-photo about-history-photo"
-            src="/images/live/about-facility.webp"
-            alt="Gaston Avenue Baptist Church, Dallas, early 1900s"
-          />
-        </div>
-      </section>
-
-      <section className="about-values">
-        <div className="container">
-          <p className="eyebrow about-values-eyebrow">Our Values</p>
-          <h2 className="about-values-title">What We Stand For</h2>
-          <div className="value-grid">
-            {values.map((value) => (
-              <div key={value.title} className="value-card">
-                <h3 className="value-card-title">{value.title}</h3>
-                <p className="value-card-description">{value.description}</p>
               </div>
             ))}
           </div>

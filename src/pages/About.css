@@ -1,98 +1,25 @@
 .about-hero {
   background: var(--color-navy-700);
-  padding: 88px 0 96px;
+  padding: 64px 0;
 }
 
-.about-hero-eyebrow {
-  color: var(--color-amber-100);
-  margin-bottom: 16px;
-}
-
-.about-hero-title {
-  font-size: 52px;
-  line-height: 1.15;
-  color: var(--color-white);
-  margin-bottom: 16px;
-  max-width: 900px;
-}
-
-.about-hero-subtitle {
-  font-size: 20px;
-  line-height: 1.5;
-  color: var(--color-navy-200);
-  max-width: 640px;
-}
-
-.about-mission {
-  background: var(--color-cream-50);
-  padding: 72px 0;
-}
-
-.about-mission-inner {
+.about-hero-inner {
   max-width: 800px;
 }
 
-.about-mission-eyebrow {
-  color: var(--color-amber-700);
-  margin-bottom: 16px;
-}
-
-.about-mission-quote {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.5;
-  color: var(--color-navy-700);
+.about-hero-title {
+  font-family: var(--font-heading);
   font-style: italic;
-}
-
-.about-mission-attribution {
-  display: block;
-  margin-top: 16px;
-  font-size: 15px;
-  font-style: normal;
-  color: var(--color-text-muted);
-}
-
-.about-history {
-  background: var(--color-white);
-  padding: 96px 0;
-}
-
-.about-history-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-  margin-bottom: 48px;
-}
-
-.about-history-eyebrow {
-  color: var(--color-amber-700);
+  font-size: 40px;
+  line-height: 1.15;
+  color: var(--color-white);
   margin-bottom: 16px;
 }
 
-.about-history-title {
-  font-size: 40px;
-  line-height: 1.2;
-  color: var(--color-navy-700);
-  margin-bottom: 24px;
-}
-
-.about-history-text p {
-  font-size: 18px;
+.about-hero-subtitle {
+  font-size: 16px;
   line-height: 1.55;
-  color: var(--color-text-muted);
-  margin-bottom: 24px;
-}
-
-.about-history-photo {
-  background: rgba(19, 112, 175, 0.15);
-  color: var(--color-navy-700);
-}
-
-.about-history-columns img.about-history-photo {
-  aspect-ratio: 1036 / 650;
-  height: auto;
+  color: var(--color-navy-200);
 }
 
 .about-leadership {
@@ -170,48 +97,6 @@
   margin-bottom: 0;
 }
 
-.about-values {
-  background: var(--color-white);
-  padding: 96px 0;
-  text-align: center;
-}
-
-.about-values-eyebrow {
-  color: var(--color-amber-700);
-  margin-bottom: 16px;
-}
-
-.about-values-title {
-  font-size: 40px;
-  color: var(--color-navy-700);
-  margin-bottom: 48px;
-}
-
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: left;
-}
-
-.value-card {
-  background: var(--color-cream-50);
-  border-radius: var(--radius-md);
-  padding: 32px 28px;
-}
-
-.value-card-title {
-  font-size: 22px;
-  color: var(--color-navy-700);
-  margin-bottom: 12px;
-}
-
-.value-card-description {
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--color-text-muted);
-}
-
 .about-cta {
   background: var(--color-navy-700);
   padding: 96px 0;
@@ -248,10 +133,6 @@
 }
 
 @media (max-width: 900px) {
-  .about-history-columns {
-    grid-template-columns: 1fr;
-  }
-
   .team-card,
   .team-card:has(.team-card-photo) {
     grid-template-columns: 1fr;
@@ -260,15 +141,5 @@
   .team-card-photo {
     width: 120px;
     height: 120px;
-  }
-
-  .value-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .value-grid {
-    grid-template-columns: 1fr;
   }
 }
