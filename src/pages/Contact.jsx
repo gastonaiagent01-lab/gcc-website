@@ -36,9 +36,8 @@ export default function Contact() {
           <p className="eyebrow contact-hero-eyebrow">Get In Touch</p>
           <h1 className="contact-hero-title">Contact Gaston Christian Center</h1>
           <p className="contact-hero-subtitle">
-            Interested in working together? Renting space for your church or nonprofit? Booking
-            our shared space for a meeting? Touring our facility? Or volunteering? Fill out some
-            info and we will be in touch shortly.
+            Ready to schedule a tour, ask about space availability, or learn more about our
+            programs? We&rsquo;d love to hear from you.
           </p>
         </div>
       </section>

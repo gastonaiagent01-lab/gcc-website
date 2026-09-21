@@ -1,7 +1,7 @@
 // Content sourced from the live gastonchristianctr.org/newroots page (GAS-84).
 
 export const mission = {
-  eyebrow: 'Program Mission Statement',
+  eyebrow: 'Our Mission',
   quote:
     'To honor the dignity and worth of every individual by creating a welcoming, cross-cultural experience, powered by community generosity, that empowers immigrant and refugee families to establish new roots in a new land.',
 };
